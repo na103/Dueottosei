@@ -1,0 +1,73 @@
+Name     U44 ;
+PartNo   00 ;
+Date     30/09/2022 ;
+Revision 01 ;
+Designer Engineer ;
+Company  Nicola Avanzi ;
+Assembly None ;
+Location atonce plus u44 ;
+Device   g16v8a ;
+
+$define vcc 'b'1
+
+
+/* Dedicated input pins */
+
+pin 1   = i1; /* Input */
+pin 2   = i2; /* Input */
+pin 3   = i3; /* Input */
+pin 4   = i4; /* Input */
+pin 5   = i5; /* Input */
+pin 6   = i6; /* Input */
+pin 7   = i7; /* Input */
+pin 8   = i8; /* Input */
+pin 9   = i9; /* Input */
+pin 11  = i11; /* Input */
+pin 17  = io17; /* Input */
+pin 18  = io18; /* Input */
+
+/* Programmable output pins */
+
+pin 12  = o12; /* output */
+pin 13  = io13; /* input output */
+pin 14  = io14; /* input output */
+pin 15  = io15; /* input output */
+pin 16  = io16; /* input output */
+pin 19  = o19; /* output */
+
+
+
+
+!o12 =  i2 & i4 & i5 & i6 & !i7 & !i8 & !i9;
+o12.oe = vcc;
+
+!io13 = i1 & i2 & !i3 & i4 & i5 & i6 & !i7 & !i8 & !i9;
+io13.oe = vcc;
+
+!io14 = i1 & i2 & i3 & i4 & i5 & i6 & !i7 & !i8 & !i9;
+io14.oe = vcc;
+
+io15 = i9 & i11;
+io15.oe = vcc;
+
+io16 = io17 & io18;
+io16.oe = vcc;
+
+!o19 = i9 & io17;
+o19.oe = vcc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
