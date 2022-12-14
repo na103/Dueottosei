@@ -87,6 +87,7 @@ https://github.com/na103/Dueottosei/blob/main/misc/review.txt
 
 from my testing this is the best setup that has worked every time without crashing on a few hours of Windows 3.1 use
 * Amiga 500+ board rev 8a Cpu 68010 with 2Mb chip Ram
+* Kickstart and Workbench 2.05
 * [AlfaPower Plus](http://amiga.resource.cx/exp/alfapowerplus) with 8Mb Fast (4Mb dedicated as msdos extended memory) and 500Mb ide hdd
 * external floppy disk DF1 configured as A:
 * 80Mb partition non formatted with Amiga filesystem as C:
@@ -95,7 +96,7 @@ from my testing this is the best setup that has worked every time without crashi
 the [socket adapter for Gary](https://github.com/na103/Dueottosei/blob/main/img/GaryAdapter/socket.jpg) could solve some problems, in my tests it didn't help
 
 ## About Xilinx XC2018
-it is a first generation FPGA produced by Xilinx without a permanent internal memory, in practice it must be programmed, in this case is the Amiga, every time is started. you can read about this in detail in [this article](https://www.righto.com/2020/09/reverse-engineering-first-fpga-chip.html) made by Ken Shirrif a few years ago.
+it is a first generation FPGA produced by Xilinx without a permanent internal memory, in practice it must be programmed, in this case is the Amiga, every time is started. you can read about this in detail in [this article](https://www.righto.com/2020/09/reverse-engineering-first-fpga-chip.html) made by Ken Shirriff a few years ago.
 
 thanks to [this tool created](https://github.com/na103/xc2018) by Ken Shirriff and modified by me for xc2018 I was able to rebuild the lca files of the fpga configuration bit streams that I found inside some files on the floppy.
 
