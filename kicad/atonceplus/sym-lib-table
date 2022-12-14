@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name atonceplus-rescue)(type Legacy)(uri ${KIPRJMOD}/atonceplus-rescue.lib)(options "")(descr ""))
+)

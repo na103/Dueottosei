@@ -1,0 +1,389 @@
+ (routes 
+  (resolution um 10)
+  (parser
+  )
+  (structure_out
+   (layer F.Cu (type signal)
+   )
+   (layer In1.Cu (type power)
+   )
+   (layer In2.Cu (type power)
+   )
+   (layer B.Cu (type signal)
+   )
+  )
+  (library_out
+   (padstack "Via[0-3]_800:400_um"
+    (shape (circ F.Cu 8000 0 0))
+    (shape (circ In1.Cu 8000 0 0))
+    (shape (circ In2.Cu 8000 0 0))
+    (shape (circ B.Cu 8000 0 0))
+   )
+  )
+  (network_out
+   (net VCC 
+   )
+   (net GND 
+   )
+   (net "Net-(C17-Pad1)" 
+   )
+   (net Z_D4 
+   )
+   (net Z_D3 
+   )
+   (net Z_D2 
+   )
+   (net Z_D1 
+   )
+   (net Z_D0 
+   )
+   (net Z_~AS 
+   )
+   (net Z_~UDS 
+   )
+   (net Z_~LDS 
+   )
+   (net Z_R~W 
+   )
+   (net Z_~DTACK 
+   )
+   (net Z_~BG 
+   )
+   (net Z_~BGACK 
+   )
+   (net Z_~BR 
+   )
+   (net Z_CLK 
+   )
+   (net Z_~HALT 
+   )
+   (net Z_~RESET 
+   )
+   (net Z_~VMA 
+   )
+   (net Z_E 
+   )
+   (net Z_~VPA 
+   )
+   (net Z_~BERR 
+   )
+   (net Z_~IPL2 
+   )
+   (net Z_~IPL1 
+   )
+   (net Z_~IPL0 
+   )
+   (net Z_FC2 
+   )
+   (net Z_FC1 
+   )
+   (net Z_FC0 
+   )
+   (net Z_A1 
+   )
+   (net Z_A2 
+   )
+   (net Z_A3 
+   )
+   (net Z_A4 
+   )
+   (net Z_A5 
+   )
+   (net Z_A6 
+   )
+   (net Z_A7 
+   )
+   (net Z_A8 
+   )
+   (net Z_A9 
+   )
+   (net Z_A10 
+   )
+   (net Z_A11 
+   )
+   (net Z_A12 
+   )
+   (net Z_A13 
+   )
+   (net Z_A14 
+   )
+   (net Z_A15 
+   )
+   (net Z_A16 
+   )
+   (net Z_A17 
+   )
+   (net Z_A18 
+   )
+   (net Z_A19 
+   )
+   (net Z_A20 
+   )
+   (net Z_A21 
+   )
+   (net Z_A22 
+   )
+   (net Z_A23 
+   )
+   (net Z_D15 
+   )
+   (net Z_D14 
+   )
+   (net Z_D13 
+   )
+   (net Z_D12 
+   )
+   (net Z_D11 
+   )
+   (net Z_D10 
+   )
+   (net Z_D9 
+   )
+   (net Z_D8 
+   )
+   (net Z_D7 
+   )
+   (net Z_D6 
+   )
+   (net Z_D5 
+   )
+   (net M_~BR 
+   )
+   (net M_~BGACK 
+   )
+   (net M_~BG 
+   )
+   (net M_~DTACK 
+   )
+   (net M_~LDS 
+   )
+   (net M_~UDS 
+   )
+   (net M_~AS 
+   )
+   (net "Net-(Q1-Pad8)" 
+   )
+   (net 6_~S0 
+   )
+   (net 6_~S1 
+   )
+   (net "Net-(R15-Pad2)" 
+   )
+   (net 7_~ERROR 
+   )
+   (net 7_~BUSY 
+   )
+   (net "Net-(R31-Pad1)" 
+   )
+   (net "Net-(R31-Pad2)" 
+   )
+   (net "Net-(R32-Pad2)" 
+   )
+   (net "Net-(R32-Pad1)" 
+   )
+   (net "Net-(R33-Pad1)" 
+   )
+   (net "Net-(R33-Pad2)" 
+   )
+   (net "Net-(R34-Pad2)" 
+   )
+   (net "Net-(R34-Pad1)" 
+   )
+   (net "Net-(R35-Pad2)" 
+   )
+   (net "Net-(R35-Pad1)" 
+   )
+   (net "Net-(R36-Pad1)" 
+   )
+   (net "Net-(R36-Pad2)" 
+   )
+   (net "Net-(R37-Pad2)" 
+   )
+   (net "Net-(R37-Pad1)" 
+   )
+   (net "Net-(R38-Pad1)" 
+   )
+   (net "Net-(R38-Pad2)" 
+   )
+   (net "Net-(R39-Pad2)" 
+   )
+   (net "Net-(R39-Pad1)" 
+   )
+   (net M2 
+   )
+   (net P65 
+   )
+   (net 6_RESET 
+   )
+   (net 7_RESET 
+   )
+   (net P46 
+   )
+   (net P9 
+   )
+   (net 6_PEREQ 
+   )
+   (net "Net-(R311-Pad2)" 
+   )
+   (net P48 
+   )
+   (net "Net-(R312-Pad2)" 
+   )
+   (net P38 
+   )
+   (net "Net-(R313-Pad2)" 
+   )
+   (net P39 
+   )
+   (net 6_~BHE 
+   )
+   (net 6_~PEACK 
+   )
+   (net 6_A23 
+   )
+   (net 6_A22 
+   )
+   (net 6_M\~IO 
+   )
+   (net 6_COD\~INTA 
+   )
+   (net 6_HDLA 
+   )
+   (net 6_HOLD 
+   )
+   (net 6_~READY 
+   )
+   (net 6_A21 
+   )
+   (net 6_A20 
+   )
+   (net 6_A19 
+   )
+   (net 6_A18 
+   )
+   (net 6_A17 
+   )
+   (net 6_A16 
+   )
+   (net 6_A15 
+   )
+   (net 6_A14 
+   )
+   (net 6_A13 
+   )
+   (net 6_A12 
+   )
+   (net 6_A11 
+   )
+   (net 6_A10 
+   )
+   (net 6_A9 
+   )
+   (net 6_A8 
+   )
+   (net 6_A7 
+   )
+   (net 6_A6 
+   )
+   (net 6_A5 
+   )
+   (net 6_A4 
+   )
+   (net 6_A3 
+   )
+   (net 6_A2 
+   )
+   (net 6_A1 
+   )
+   (net 6_A0 
+   )
+   (net 6_D0 
+   )
+   (net 6_D8 
+   )
+   (net 6_D1 
+   )
+   (net 6_D9 
+   )
+   (net 6_D2 
+   )
+   (net 6_D10 
+   )
+   (net 6_D3 
+   )
+   (net 6_D11 
+   )
+   (net 6_D4 
+   )
+   (net 6_D12 
+   )
+   (net 6_D5 
+   )
+   (net 6_D13 
+   )
+   (net 6_D6 
+   )
+   (net 6_D14 
+   )
+   (net 6_D7 
+   )
+   (net 6_D15 
+   )
+   (net 6_~BUSY 
+   )
+   (net 6_INTR 
+   )
+   (net 7_~NPRD 
+   )
+   (net 7_~NPWR 
+   )
+   (net 7_NPS2 
+   )
+   (net 7_~NPS1 
+   )
+   (net P61 
+   )
+   (net P30 
+   )
+   (net P71 
+   )
+   (net "Net-(U15-Pad8)" 
+   )
+   (net "Net-(U15-Pad10)" 
+   )
+   (net GCLK 
+   )
+   (net P19 
+   )
+   (net P45 
+   )
+   (net P53 
+   )
+   (net CLK 
+   )
+   (net P47 
+   )
+   (net LDC 
+   )
+   (net "Net-(U28-Pad9)" 
+   )
+   (net P67 
+   )
+   (net P27 
+   )
+   (net P56 
+   )
+   (net "Net-(U37-Pad2)" 
+   )
+   (net P24 
+   )
+   (net P29 
+   )
+   (net P42 
+   )
+   (net "Net-(U43-Pad4)" 
+   )
+   (net "Net-(U42-Pad1)" 
+   )
+  )
+ )

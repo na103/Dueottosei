@@ -1,0 +1,138 @@
+
+(rules PCB atonceplus
+  (snap_angle 
+    ninety_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 440)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule In1.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule In2.Cu
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.0)
+    (clear 125.0 (type smd_to_turn_gap))
+  )
+  (padstack "Via[0-3]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In1.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle In2.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-3]_800:400_um" "Via[0-3]_800:400_um" default
+  )
+  (via 
+    "Via[0-3]_800:400_um-kicad_default" "Via[0-3]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-3]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-3]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (layer_rule In1.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (layer_rule In2.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    VCC GND "Net-(C17-Pad1)" "Z_D4" "Z_D3" "Z_D2" "Z_D1" "Z_D0"
+    "Z_~AS" "Z_~UDS" "Z_~LDS" "Z_R~W" "Z_~DTACK" "Z_~BG" "Z_~BGACK" "Z_~BR"
+    "Z_CLK" "Z_~HALT" "Z_~RESET" "Z_~VMA" "Z_E" "Z_~VPA" "Z_~BERR" "Z_~IPL2"
+    "Z_~IPL1" "Z_~IPL0" "Z_FC2" "Z_FC1" "Z_FC0" "Z_A1" "Z_A2" "Z_A3"
+    "Z_A4" "Z_A5" "Z_A6" "Z_A7" "Z_A8" "Z_A9" "Z_A10" "Z_A11"
+    "Z_A12" "Z_A13" "Z_A14" "Z_A15" "Z_A16" "Z_A17" "Z_A18" "Z_A19"
+    "Z_A20" "Z_A21" "Z_A22" "Z_A23" "Z_D15" "Z_D14" "Z_D13" "Z_D12"
+    "Z_D11" "Z_D10" "Z_D9" "Z_D8" "Z_D7" "Z_D6" "Z_D5" "M_~BR"
+    "M_~BGACK" "M_~BG" "M_~DTACK" "M_~LDS" "M_~UDS" "M_~AS" "Net-(Q1-Pad1)" "Net-(Q1-Pad8)"
+    "6_~S0" "6_~S1" "Net-(R15-Pad2)" "7_~ERROR" "7_~BUSY" "Net-(R31-Pad1)" "Net-(R31-Pad2)" "Net-(R32-Pad2)"
+    "Net-(R32-Pad1)" "Net-(R33-Pad1)" "Net-(R33-Pad2)" "Net-(R34-Pad2)" "Net-(R34-Pad1)" "Net-(R35-Pad2)" "Net-(R35-Pad1)" "Net-(R36-Pad1)"
+    "Net-(R36-Pad2)" "Net-(R37-Pad2)" "Net-(R37-Pad1)" "Net-(R38-Pad1)" "Net-(R38-Pad2)" "Net-(R39-Pad2)" "Net-(R39-Pad1)" M2
+    P65 "6_RESET" "7_RESET" P46 P9 "6_PEREQ" "Net-(R311-Pad2)" P48
+    "Net-(R312-Pad2)" P38 "Net-(R313-Pad2)" P39 "6_~BHE" "Net-(U13-Pad2)" "Net-(U13-Pad3)" "6_~PEACK"
+    "6_A23" "6_A22" "Net-(U13-Pad68)" "6_M\~IO" "6_COD\~INTA" "6_HDLA" "6_HOLD" "6_~READY"
+    "6_A21" "6_A20" "6_A19" "6_A18" "6_A17" "6_A16" "6_A15" "6_A14"
+    "6_A13" "6_A12" "6_A11" "6_A10" "6_A9" "6_A8" "6_A7" "6_A6"
+    "6_A5" "6_A4" "6_A3" "6_A2" "6_A1" "6_A0" "6_D0" "6_D8"
+    "6_D1" "6_D9" "6_D2" "6_D10" "6_D3" "6_D11" "6_D4" "6_D12"
+    "6_D5" "6_D13" "6_D6" "6_D14" "6_D7" "6_D15" "6_~BUSY" "Net-(U13-Pad55)"
+    "Net-(U13-Pad56)" "6_INTR" "Net-(U13-Pad58)" "Net-(U14-Pad1)" "Net-(U14-Pad2)" "Net-(U14-Pad3)" "Net-(U14-Pad4)" "7_~NPRD"
+    "7_~NPWR" "Net-(U14-Pad13)" "7_NPS2" "7_~NPS1" "Net-(U14-Pad37)" "Net-(U14-Pad38)" "Net-(U14-Pad40)" P61
+    P30 P71 "Net-(U15-Pad8)" "Net-(U15-Pad10)" GCLK P19 P45 P53
+    CLK P47 "Net-(U22-Pad15)" LDC "Net-(U28-Pad11)" "Net-(U28-Pad9)" P67 P27
+    P56 "Net-(U31-Pad5)" "Net-(U32-Pad5)" "Net-(U33-Pad5)" "Net-(U34-Pad5)" "Net-(U37-Pad2)" P24 P29
+    P42 "Net-(U43-Pad4)" "Net-(U42-Pad1)"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 250.0)
+    )
+    (layer_rule In1.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (layer_rule In2.Cu
+      (rule 
+        (width 0.0) 
+      )
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

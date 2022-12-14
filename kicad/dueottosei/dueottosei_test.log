@@ -1,0 +1,100 @@
+source {C:/Users/n.avanzi/Desktop/Atonce/kicad/dueottosei/~dueottosei_test.do}
+ bus diagonal
+ fanout 5
+ route 20
+ clean 2
+ route 25 16
+ clean 2
+ filter 5
+ recorner diagonal
+ report status
+
+____________________________________________________________________________________________
+ELECTRA Version  8.65
+Design        = C:\Users\n.avanzi\Desktop\Atonce\kicad\dueottosei\dueottosei_test.dsn
+Report Time   = 16:04:53
+Nets          =      204
+Components    =       90
+Connections   =      538
+Vias          =      581
+Routed Length =      0.0 um
+Signal Layers =        2
+Power Layers  =        2
+Total Pins    =      782
+Completion    =  100.00%
+Unroutes      =        0
+Routing Time  = 00:00:01
+
+____________________________________________________________________________________________
+|     |          |        |        |        |        |        |        |         |         |
+|  #  |   Pass   | Shorts |DRC Errs|Failures|Unroutes|  Vias  |  Reduc |  Time   |  Total  |
+|_____|__________|________|________|________|________|________|________|_________|_________|
+|    0| Bus      |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    1| Fanout   |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    2| Route    |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|    3| Clean    |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    4| Route    |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|    5| Clean    |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    6| Filter   |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|    6| Recorner |       0|       0|       0|       0|       0|        |  0:00:00|  0:00:00|
+|     |          |        |        |        |        |        |        |         |         |
+|  #  |   Pass   | Shorts |DRC Errs|Failures|Unroutes|  Vias  |  Reduc |  Time   |  Total  |
+|_____|__________|________|________|________|________|________|________|_________|_________|
+source {C:/Users/n.avanzi/Desktop/Atonce/kicad/dueottosei/~dueottosei_test.do}
+ bus diagonal
+ fanout 5
+ route 20
+ clean 2
+ route 25 16
+ clean 2
+ filter 5
+ recorner diagonal
+ report status
+
+____________________________________________________________________________________________
+ELECTRA Version  8.65
+Design        = C:\Users\n.avanzi\Desktop\Atonce\kicad\dueottosei\dueottosei_test.dsn
+Report Time   = 16:05:01
+Nets          =      204
+Components    =       90
+Connections   =      538
+Vias          =      581
+Routed Length =      0.0 um
+Signal Layers =        2
+Power Layers  =        2
+Total Pins    =      782
+Completion    =  100.00%
+Unroutes      =        0
+Routing Time  = 00:00:09
+
+____________________________________________________________________________________________
+|     |          |        |        |        |        |        |        |         |         |
+|  #  |   Pass   | Shorts |DRC Errs|Failures|Unroutes|  Vias  |  Reduc |  Time   |  Total  |
+|_____|__________|________|________|________|________|________|________|_________|_________|
+|    0| Bus      |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    1| Fanout   |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    2| Route    |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|    3| Clean    |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    4| Route    |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|    5| Clean    |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    6| Filter   |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|    6| Recorner |       0|       0|       0|       0|       0|        |  0:00:00|  0:00:00|
+|    6| Bus      |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    7| Fanout   |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|    8| Route    |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|    9| Clean    |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|   10| Route    |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|   11| Clean    |       0|       0|       0|       0|     581|        |  0:00:00|  0:00:00|
+|   12| Filter   |       0|       0|       0|       0|     581|       0|  0:00:00|  0:00:00|
+|   12| Recorner |       0|       0|       0|       0|       0|        |  0:00:00|  0:00:00|
+|     |          |        |        |        |        |        |        |         |         |
+|  #  |   Pass   | Shorts |DRC Errs|Failures|Unroutes|  Vias  |  Reduc |  Time   |  Total  |
+|_____|__________|________|________|________|________|________|________|_________|_________|
+ report summary all
+ _______________________________________________________________________________________________________
+|   Summary   | Completion |  Shorts|DRC Errs|Failures|Unroutes|  Vias  |    Length     |  Total time  |
+--------------------------------------------------------------------------------------------------------
+|          all|     100.00%|       0|       0|       0|       0|     581|         0.0 um|  0:00:00     |
+|_____________|____________|________|________|________|________|________|_______________|______________|
+
+
