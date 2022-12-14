@@ -1,0 +1,469 @@
+From: honp9@menudo.uh.edu (Jason L. Tibbitts III)
+Organization: Blob Shop Programmers
+Subject: REVIEW: ATonce
+Keywords: emulation, IBM, AT, hardware
+Distribution: world
+Newsgroups: comp.sys.amiga.reviews
+Followup-To: comp.sys.amiga.emulations
+Reply-To: 871579l@aucs.acadiau.ca (Todd Lowe)
+
+The ATonce is a hardware IBM AT emulator similar to the AT bridgeboard,
+except it is designed for the Amiga 500 instead of the Amiga 2000. It
+performs the emulation quite well, but problems with its setup software
+and possible problems with various Amiga configurations detract from its
+usefulness except on a bare-bones A500 system.
+
+
+Lately a lot of people have been wondering about the ATonce 80286
+emulator for the Amiga 500.  Last week I had the opportunity to test
+one of these and unfortunately did not have much success.  Here I will
+explain what the thing is (if you don't know), how it's supposed to work, 
+and the problems I had.  All testing was done on a Revision 5 Amiga 500
+with the new Agnus, 1 meg chip ram, 42ms 48Meg Seagate st157-n hard drive,
+Trumpcard controller and 2 meg fast ram. I also have both AmigaDos 1.3 and
+2.0, but since 2.0 is loaded to ram it's pointers seem to be reset when
+the ATonce is used. For this reason testing was done using Kickstart
+and Workbench 1.3. The product was tried both with and without the A500
+expansion hardware and on a 2000, but the latter two configurations were
+tried only briefly while first was used for about a week.
+
+[Ed. Note:  If you have used the ATonce on other configurations, or have
+any other information which you wish to add, please send mail to
+HONP9@menudo.uh.edu with your experiences.]
+
+At the end of this review are benchmarks and test results obtained
+with Norton Utilities and CheckIt.
+
+----------------------------------------------------------------------
+
+The ATonce is an 80286 AT emulator from a German company 'Vortex'. 
+
+Their address:
+
+ Falterstrasse 51-53, D-7101 Flien bei Heilbronn, Germany.
+ phone : 07 131 58 72-0
+ e-mail: 100016,2545@compuserve.com 
+
+ I tested a unit from:
+ Computers Plus,
+ Ralph Doncaster,  880274d@aucs.AcadiaU.Ca
+
+It is a very small board containing a Motorola 68000.  This is important
+because many Amigas have third party 68000's and Vortex claims they need
+the stability of a real one.  (I don't know if this is so, but at least
+it is easier to install; you simply remove the existing 68000 and plug in
+the card)  The board also contains an Intel 80286 and a large custom gate
+array containing the BIOS and other custom circuitry.  Along with this is
+a special "double socket" to put under the Gary chip and initialization
+and setup software.
+
+Once I had the ATonce I immediately installed it following Vortex's manual.
+This caused some problems.  I had the CPU card and the Gary module installed
+correctly, and I'd run the setup program and told it to use default settings, 
+but I could not get the program to work.  When you start the initialization
+software it normally sets some pointers to the ATonce code, then reboots
+the Amiga.  At this point you get both an Amiga startup screen and a 
+standard MS-DOS screen complete with memory and BIOS test.  On my
+system I was losing the memory required for the ATonce, but was not getting
+that MS-DOS screen.  I tried with and without my HD, expanded memory, 
+even tried an old Agnus, but no luck.  It turned out that on my system
+it only works WITHOUT the Gary module.  The manual says that the Gary module
+may cause problems finding an A590 HD, but apparently causes problems on
+older A500's as well.  I should mention here that the purpose of the Gary
+module is to avoid timing differences between internal and external
+memory expansion in the 500, and is therefore unnecessary in a 2000.
+The manual says that it will not work with the 2000, but someone else here
+tried it in his and it seemed to work about the same as on my 500. (As you
+will see this should be read FLAKY.)  On the 2000 ATonce would initialize
+about half of the time and would run MS-DOS software once it was up.
+The extent of our tests was to boot DOS and exit so perhaps someone else
+(or maybe myself if I get time) could do more in depth tests on the 2000.
+
+[Ed. Note: If anyone has done this, please sent mail to HONP9@menudo.uh.edu.]
+
+While attempting to get the ATonce working the first time I noticed that
+the manual mentioned problems with older revision motherboards.  There
+are two files on the program disk that have the extension .dsg.  Only one
+of these is used by the ATonce, but apparently they are modifications
+for different revision mother boards.  The files are named "atonce.dsg"
+and "other.dsg".  The manual says something to the effect of: 
+
+    "If your motherboard is an older revision than 6A you
+    may need to rename other.dsg to atonce.dsg to obtain full
+    performance from your ATonce. Do NOT ever use the file
+    other.dsg on a revision older than 6A."
+
+Yes, I know this contradicts itself, but it is in the manual (not
+a direct quote as I have returned the product, but close enough).
+To confuse things even more their Erratum listed the passage as:
+
+    "If your motherboard is newer than revision 5 you may need
+    to rename other.dsg to atonce.dsg to obtain full performance.
+    NEVER use the file other.dsg on a revision newer than 5."
+
+Again this is not a direct quote, but it is just as confusing and explains
+the problem.  Not knowing which to use I tried with both and found
+they both work, but other.dsg was faster according to Norton's SI.
+
+Now at this point I have the ATonce program loading from my HD, but 
+DOS booting from floppy and have only run MS-DOS and SI.
+
+The biggest problems start when trying to install ATonce so that MS-DOS
+can use the Amiga HD.  ATonce allows for HD support as either a file
+on an AmigaDos partition or a full MS-DOS partition.  First I tried
+to create a file.  The manual and setup program are straight forward.
+You select 'Hard Drive' and tell it what you want following prompts AND
+the manual.  The format for file is:
+	HD:path/filename,first_dos_track,last_dos_track
+with 50 tracks being about 5 megs.  For a partition you simply give the
+partition name (it must be a mounted device).
+
+After creating a file the right size I ran ATonce.  No luck.  It used
+memory when I rebooted, but didn't initialize the card.  The next time
+I rebooted, AmigaDos couldn't validate the hard drive containing the 
+partition file.  I managed to validate the drive with AmigaDos 2.0 (not
+sure why 1.3 wouldn't) and the tried again after doing a cold boot.
+This time the ATonce found the file and used it as C:.  I was able to
+make this a boot partition using Zenith's PART program, format it, and
+install Zenith Dos 3.30 plus.  I rebooted and tried again.  This
+time the ATonce worked correctly, and even booted from the HD file.
+
+Great, now it was working! WRONG!
+
+Now every time I changed something in the ATonce configuration my HD
+wouldn't validate.  Eventually it was beyond even FixDisk and was
+reformatted.  Since I had to reformat I tried creating a MS-DOS partition
+in addition to a file.  This did not go well either.  I could get the
+partition recognized, but when I tried to format or partition it 
+the system would crash.  Amiga-Amiga-S is a hardware reset for the ATonce,
+and even this did not work at this point.  (One thing I did like was
+that it never crashed or even affected the Amiga side once it was running.
+The setup and initialization programs often did, but MS-DOS didn't.)
+
+OK, enough problems with the hardware.  Now I created a partition file
+and formatted it and decided to test the thing's MS-DOS compatibility.
+After great pains with disk drive being trashed I got ATonce working.
+With my memory configuration (3 megs) I was able to get ONLY 640K base
+and 512K extended.  This left over 1.5 megs for the Amiga Side, but 
+the way the ATonce software operates it couldn't access it.
+My configuration is:
+        $8c2    -  $7e7ff    : original chip ram
+        $80000  -  $fffff    : extra 512K chip ram
+        $280000 - $2fffff    : 1st Meg fast ram
+        $380000 - $3fffff    : 2nd Meg fast ram
+
+ATonce would let me use $80000-$fffff and either Meg of fast ram, but
+it would not allow me to use both megs of fast ram, even when I specified
+it with an option "MEMMODE" which is provided to allow user specified
+memory usage.
+
+Now, after figuring out the memory problem I got ATonce running. It 'SI'ed
+at :
+	        other.dsg             atonce.dsg
+    ---------------------------------------------   
+	CI         5.9                   4.6
+	DI         0.2                   0.2
+	PI         4.0                   3.1
+
+It never reached the 6.1 that Vortex advertises, and I was able to slow it
+down to 1.6 by having high activity on the Amiga Side.  (Moving screens
+and graphics demos, etc.)
+
+Once running the ATonce performed very closely to what is advertised.
+It had printer support, RS-232 support (although CheckIt reported errors
+on COM2), CGA, Hercules, and Olivetti graphics and text support.  There
+was even the pitiful MS-DOS sound.  There are only 2 real problems:
+
+1. The Amiga mouse is supposed to be emulating a Microsoft mouse.
+   This was not a very good emulation.  MOUSE.COM was the only program
+   that would find my mouse.  None of the Microsoft utilities would
+   find it, a graphics program I've written (which uses a Microsoft
+   mouse fine on PC's) wouldn't, CheckIt wouldn't, and neither would
+   any other program I ran.
+
+2. Apparently certain access to interrupts can crash the ATonce.  When 
+   CheckIt tested interrupts it crashed, and when I tried to use the
+   program FastBack Plus it crashed.  (These are, however the only two
+   cases I had it crash from the MS-Dos side other than formating the
+   HD.)
+
+I don't have much to say about the MS-DOS emulation except that it is
+good when it works.  I ran games and utility software with equal success.
+	  
+Here is a list of tested programs, all of which worked exactly as on
+a real AT, except for mouse support and FastBack Plus (which crashed).
+
+   Norton Utilities
+   CheckIt
+   Turbo C 2.0
+   Turbo Assembler (From C 2.0)
+   Turbo Debugger  (From C 2.0)
+   Turbo Pascal 5.0
+   Word Perfect 5.1
+   Procomm
+
+   Firepower
+   Silpheed
+
+   Mouse
+   FastBack Plus
+
+This is not a long list, but I think that it is a good indication of
+what the ATonce is capable of running.  I think that the only problem
+is that there are some configurations of hardware that were not thoroughly
+tested prior to the ATonce's release.  When running on a stand-alone,
+A500 with only one meg of ram and with the Gary module uninstalled, the
+ATonce seems to work fine.  I think it is a good emulator if you want
+stand alone AT in an Amiga case and are happy with only 640K memory 
+(and 86K on the Amiga side).  I was attracted to the ATonce by the promise
+of support of hard drives, expanded memory and the mouse.
+In these three areas it is sadly lacking, but if there is a new release
+of the support software this will be a very useful and long awaited 
+package.
+
+One last thing that may be interesting is the quality of translation
+from German to English in the manual. I found it humourous that the
+new Agnus was referred to as the "REALLY BIG FAT AGNUS" rather than
+new or super or fatter Agnus.
+
+
+Benchmarks:
+-----------
+
+Norton SI Results With atonce.dsg file being used:
+
+
+SI-System Information, Advanced Edition 4.50, (C) Copr 1987-88, Peter Norton
+
+         Computer Name: IBM AT
+      Operating System: DOS 3.30
+   Built-in BIOS dated: Friday, November 30, 1990
+        Main Processor: Intel 80286              Serial Ports: 2
+          Co-Processor: None                   Parallel Ports: 1
+ Video Display Adapter: Color/Graphics (CGA)
+    Current Video Mode: Text, 80 x 25 Black and White
+ Available Disk Drives: 3, A: - C:
+
+DOS reports 640 K-bytes of memory:
+    73 K-bytes used by DOS and resident programs
+   567 K-bytes available for application programs
+A search for active memory finds:
+   640 K-bytes main memory     (at hex 00000-0A000)
+   128 K-bytes display memory  (at hex 0A000-0C000)
+   512 K-bytes extended memory (at hex 10000-18000)
+ROM-BIOS Extensions are found at hex paragraphs: C400
+
+  Computing Index (CI), relative to IBM/XT: 4.6  
+       Disk Index (DI), relative to IBM/XT: 0.2 
+Performance Index (PI), relative to IBM/XT: 3.1 
+
+-----------
+Norton SI results with other.dsg file being used:
+
+
+SI-System Information, Advanced Edition 4.50, (C) Copr 1987-88, Peter Norton
+
+         Computer Name: IBM AT
+      Operating System: DOS 3.30
+   Built-in BIOS dated: Friday, November 30, 1990
+        Main Processor: Intel 80286              Serial Ports: 2
+          Co-Processor: None                   Parallel Ports: 1
+ Video Display Adapter: Color/Graphics (CGA)
+    Current Video Mode: Text, 80 x 25 Black and White
+ Available Disk Drives: 3, A: - C:
+
+DOS reports 640 K-bytes of memory:
+    73 K-bytes used by DOS and resident programs
+   567 K-bytes available for application programs
+A search for active memory finds:
+   640 K-bytes main memory     (at hex 00000-0A000)
+   128 K-bytes display memory  (at hex 0A000-0C000)
+   512 K-bytes extended memory (at hex 10000-18000)
+ROM-BIOS Extensions are found at hex paragraphs: C400
+
+  Computing Index (CI), relative to IBM/XT: 5.9  
+       Disk Index (DI), relative to IBM/XT: 0.2 
+Performance Index (PI), relative to IBM/XT: 4.0 
+
+_______
+
+CheckIt Results:
+
+
+                          CheckIt 2.1 Activity Log
+                             3/2/1991 22:36:18
+
+                     === CONFIGURATION INFORMATION ===
+
+      DOS Version: 3.30
+         ROM BIOS: (Standard)                  BIOS Date: 11/30/90
+
+   Processor Type: 80286 AT Machine
+ Math Coprocessor: Not Present
+      Base Memory: 640K                        Available: 566K
+  Extended Memory: 512K                        Available: 512K
+  EXPANDed Memory: No EMS driver installed
+    Video Adapter: CGA
+    Video Address: B800h                  Video RAM Size: 16K
+    Hard Drive(s): Drive 0 (C:) = 18M
+  Floppy Drive(s): A:720K(3.5")
+   Clock/Calendar: CMOS Clock
+ Parallel Port(s): LPT1=378h, LPT2=278h
+   Serial Port(s): COM1=3F8h, COM2=2F8h
+            Mouse: None                      Joystick(s): None
+
+                        === CLOCK/CALENDAR TEST ===
+
+Compare Current Time............................................FAILED ***
+    DOS: 22:38:03.28    Real-Time Clock: 22:38:26.00   (22.72 apart) 
+
+Compare Current Date............................................Passed
+    DOS: 03/02/1991     Real-Time Clock: 03/02/1991.
+
+Real-Time Clock Alarm...........................................FAILED ***
+
+Compare Elapsed Time............................................FAILED ***
+    DOS: 18.84 Seconds  Real-Time Clock: 20.00 Seconds(1.16 apart) 
+
+
+                  *** END TESTS: 3 ERRORS ENCOUNTERED ***
+
+                       === COM1 SERIAL PORT TEST ===
+
+    Loopback Plug...............................................Not Present
+
+    Test data register..........................................Passed
+    Test interrupt enable.......................................Passed
+    Test interrupt id...........................................Passed
+    Test line control...........................................Passed
+    Test modem control..........................................Passed
+    Test line status............................................Passed
+    Test modem status...........................................FAILED ***
+        Expected 05h, received 15h.
+
+    Test different baud rates...................................Passed
+
+
+                   *** END TESTS: 1 ERROR ENCOUNTERED ***
+
+                       === COM2 SERIAL PORT TEST ===
+
+    Loopback Plug...............................................Not Present
+
+    Test data register..........................................FAILED ***
+        Received unexpected character: 00h.
+
+    Test interrupt enable.......................................Passed
+    Test interrupt id...........................................Passed
+    Test line control...........................................Passed
+    Test modem control..........................................Passed
+    Test line status............................................FAILED ***
+        Received unexpected character: 00h.
+
+    Test modem status...........................................FAILED ***
+        Expected 05h, received 15h.
+
+    Test different baud rates...................................Passed
+
+
+                  *** END TESTS: 3 ERRORS ENCOUNTERED ***
+
+                      === LPT1 PARALLEL PORT TEST ===
+
+    Loopback Plug...............................................Not Present
+
+    Test parallel data register.................................Passed
+    Test with external loopback.................................Not Tested
+
+
+                  *** END TESTS: NO ERRORS ENCOUNTERED ***
+
+                           === VIDEO RAM TEST ===
+
+Test Results:
+    Video Memory................................................Passed
+
+    Video Page Test (4 Pages)...................................Passed
+
+                          === VIDEO TEXT TEST ===
+
+Character Set:
+    Mode 00h (CGA)..............................................Passed
+    Mode 01h (CGA)..............................................Passed
+    Mode 02h (CGA)..............................................Passed
+    Mode 03h (CGA)..............................................Passed
+
+Character Attributes:
+    Mode 00h (CGA)..............................................Passed
+    Mode 01h (CGA)..............................................Passed
+    Mode 02h (CGA)..............................................Passed
+    Mode 03h (CGA)..............................................Passed
+
+                        === VIDEO GRAPHICS TEST ===
+
+    Mode 04h (CGA)..............................................Passed
+    Mode 05h (CGA)..............................................Passed
+    Mode 06h (CGA)..............................................Passed
+
+                  *** END TESTS: NO ERRORS ENCOUNTERED ***
+
+
+                       === MAIN SYSTEM BENCHMARK ===
+
+       +- CPU SPEED -+      +--- VIDEO SPEED ----+         +- MATH SPEED-+
+   2.0K+             |  2.0K+                    |      50K+             |
+   1.8K+     Model 60|  1.8K+                    |      45K+             |
+   1.6K+             |  1.6K+                    |      40K+             |
+   1.4K+     AT 339  |  1.4K+                    |      35K+             |
+   1.2K+             |  1.2K+        @@@         |      30K+             |
+   1.0K+ ___ Model 30|  1.0K+        @@@         |      25K+             |
+   0.8K+ @@@ Turbo-10|  0.8K+        @@@         |      20K+     ___     |
+   0.6K+ @@@         |  0.6K+        @@@         |      15K+     @@@     |
+   0.4K+ @@@ PC, XT  |  0.4K+        @@@         |      10K+     @@@     |
+   0.2K+ @@@         |  0.2K+        @@@         |       5K+     @@@     |
+     0 +-------------+    0 +--------------------+       0 +-------------+
+     80286 CPU,  0.63 Mhz     CGA Video Adapter            No Coprocessor
+
+                                     +-+
+                     1023 Dhrystones |/| Determine CPU Speed
+                                     +-+
+              1270 Characters/Second |/| Determine Video Speed
+                                     +-+
+                    20.4K Whetstones |/| Determine Math Speed
+                                     +-+
+
+                        === HARD DISK BENCHMARK ===
+
+       +--- SEEK TIME ---+                                  +- XFER SPEED -+
+       |                 |                                  |              |
+  1.0sec+  ___           |                               20K+              |
+  0.9sec+  @@@           |                               18K+              |
+  0.8sec+  @@@           |          Drive: 0 (C:)        16K+              |
+  0.7sec+  @@@           |      Disk Type: 0             14K+     ___      |
+  0.6sec+  @@@           |      Cylinders: 160           12K+     @@@      |
+  0.5sec+  @@@           |          Heads: 8             10K+     @@@      |
+  0.4sec+  @@@           |  Sectors/Track: 27             8K+     @@@      |
+  0.3sec+  @@@           |    Total Bytes: 17,694,720     6K+     @@@      |
+  0.2sec+  @@@           |                                4K+     @@@      |
+  0.1sec+  @@@           |                                2K+     @@@      |
+   0   +-----------------+                                0 +--------------+
+         Average  Track                                     Block Size: 110K
+                                     +-+
+                            1389.6ms |/| Determine Average Seek Time
+                                     +-+
+                               2.9ms |/| Determine Track to Track Seek Time
+                                     +-+
+                        14.0K/Second |/| Determine Transfer Speed
+                                     +-+
+
+
+[Ed. Note:  The following was added by Mr. Lowe recently.]
+
+I neglected to mention that the A501 clock is used to store CMOS info for
+the MS-DOS side, and I had my clock do really strange things (like reading
+the date and getting seconds) three times.
+
+-----------
+-Todd Lowe
+ 871579l@aucs.AcadiaU.Ca
+
