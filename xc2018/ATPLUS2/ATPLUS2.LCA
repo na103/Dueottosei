@@ -1,4 +1,4 @@
-;: ATPLUS2.LCA (2018PC84-70), XACT 5.0.0, Fri Dec 23 09:31:51 2022
+;: ATPLUS2.LCA (2018PC84-70), XACT 5.0.0, Fri Dec 23 21:18:57 2022
 Version 2
 Design 2018PC84 8 0
 Speed -70
@@ -1053,7 +1053,7 @@ Equate F = C+C
 Endblk
 Editblk HB
 Base F
-Config X:Q Y: F:Q Q:FF SET: RES: CLK:C 
+Config X: Y:Q F:Q Q:FF SET: RES: CLK:C 
 Equate F = ~Q
 Endblk
 Editblk HC
