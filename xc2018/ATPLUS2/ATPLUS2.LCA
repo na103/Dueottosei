@@ -1,4 +1,4 @@
-;: ATPLUS2.LCA (2018PC84-70), XACT 5.0.0, Sun Dec 18 19:33:37 2022
+;: ATPLUS2.LCA (2018PC84-70), XACT 5.0.0, Fri Dec 23 09:31:51 2022
 Version 2
 Design 2018PC84 8 0
 Speed -70
@@ -735,6 +735,22 @@ NProgram net280 JH.8.1.1 JH.8.1.4 col.H.local.2:JG.X
 Addnet net281 JH.Y 
 Program net281 {167G18} 
 NProgram net281 col.I.local.1:JH.Y 
+Addnet net283 JB.X IB.C 
+Netdelay net283 IB.C 0.0 
+Program net283 {38G39} 
+NProgram net283 IB.C:JB.X 
+Addnet net284 IB.X HB.C 
+Netdelay net284 HB.C 0.0 
+Program net284 {38G58} 
+NProgram net284 HB.C:IB.X 
+Addnet net285 EE.X DE.C 
+Netdelay net285 DE.C 0.0 
+Program net285 {98G134} 
+NProgram net285 DE.C:EE.X 
+Addnet net286 CJ.X BJ.C 
+Netdelay net286 BJ.C 0.0 
+Program net286 {198G172} 
+NProgram net286 BJ.C:CJ.X 
 Editblk JE
 Base FG
 Config X:G Y:Q F:B:C G:A:Q Q:FF SET: RES: CLK:K 
@@ -813,7 +829,7 @@ Equate G = A+D
 Endblk
 Editblk GD
 Base FG
-Config X:Q Y:G F:B:C:Q G:C:Q Q:FF SET: RES:D CLK:C:NOT 
+Config X:Q Y:G F: G:C:Q Q:FF SET: RES:D CLK:C:NOT 
 Equate F = 1
 Equate G = C*~Q
 Endblk
@@ -843,7 +859,7 @@ Equate G = B+B+~D
 Endblk
 Editblk FD
 Base FG
-Config X:G Y:Q F:B:C:Q G:A:C:Q Q:FF SET: RES:D CLK:K 
+Config X:G Y:Q F: G:A:C:Q Q:FF SET: RES:D CLK:K 
 Equate F = 1
 Equate G = ~A*C*Q
 Endblk
@@ -882,7 +898,7 @@ Config X:G Y:F F:B:C:Q G:B:C:Q Q:LATCH SET: RES: CLK:NOT
 Endblk
 Editblk DA
 Base FG
-Config X:Q Y:G F:B:C:Q G:B:Q Q:FF SET: RES: CLK:C 
+Config X:Q Y:G F: G:B:Q Q:FF SET: RES: CLK:C 
 Equate F = 1
 Equate G = B+~Q
 Endblk
@@ -1258,6 +1274,10 @@ Editblk P34
 Base IO
 Config I:PAD BUF:ON 
 Endblk
+Editblk P35
+Base IO
+Config I:PAD BUF: 
+Endblk
 Editblk P36
 Base IO
 Config I:PAD BUF:ON 
@@ -1282,6 +1302,14 @@ Editblk P41
 Base IO
 Config I:Q BUF: 
 Endblk
+Editblk P42
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P44
+Base IO
+Config I:PAD BUF: 
+Endblk
 Editblk P45
 Base IO
 Config I:PAD BUF:ON 
@@ -1290,13 +1318,33 @@ Editblk P46
 Base IO
 Config I:PAD BUF:ON 
 Endblk
+Editblk P47
+Base IO
+Config I:PAD BUF: 
+Endblk
 Editblk P48
 Base IO
 Config I:PAD BUF:ON 
 Endblk
+Editblk P49
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P50
+Base IO
+Config I:PAD BUF: 
+Endblk
 Editblk P51
 Base IO
 Config I:PAD BUF:ON 
+Endblk
+Editblk P52
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P53
+Base IO
+Config I:PAD BUF: 
 Endblk
 Editblk P30
 Base IO
@@ -1306,9 +1354,29 @@ Editblk P29
 Base IO
 Config I:PAD BUF:ON 
 Endblk
+Editblk P56
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P57
+Base IO
+Config I:PAD BUF: 
+Endblk
 Editblk P28
 Base IO
 Config I:PAD BUF:TRI 
+Endblk
+Editblk P27
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P58
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P59
+Base IO
+Config I:PAD BUF: 
 Endblk
 Editblk P26
 Base IO
@@ -1321,6 +1389,10 @@ Endblk
 Editblk P60
 Base IO
 Config I:PAD BUF:ON 
+Endblk
+Editblk P61
+Base IO
+Config I:PAD BUF: 
 Endblk
 Editblk P24
 Base IO
@@ -1350,9 +1422,25 @@ Editblk P20
 Base IO
 Config I:PAD BUF:TRI 
 Endblk
+Editblk P19
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P66
+Base IO
+Config I:PAD BUF: 
+Endblk
 Editblk P67
 Base IO
 Config I:Q BUF: 
+Endblk
+Editblk P18
+Base IO
+Config I:PAD BUF: 
+Endblk
+Editblk P17
+Base IO
+Config I:PAD BUF: 
 Endblk
 Editblk P68
 Base IO
@@ -1365,6 +1453,10 @@ Endblk
 Editblk P16
 Base IO
 Config I:PAD BUF:TRI 
+Endblk
+Editblk P15
+Base IO
+Config I:PAD BUF: 
 Endblk
 Editblk P70
 Base IO
@@ -1390,6 +1482,10 @@ Editblk P73
 Base IO
 Config I:PAD BUF:ON 
 Endblk
+Editblk P11
+Base IO
+Config I:PAD BUF: 
+Endblk
 Editblk P9
 Base IO
 Config I:PAD BUF:ON 
@@ -1409,6 +1505,10 @@ Endblk
 Editblk P5
 Base IO
 Config I:Q BUF: 
+Endblk
+Editblk P6
+Base IO
+Config I:PAD BUF: 
 Endblk
 Editblk P3
 Base IO
