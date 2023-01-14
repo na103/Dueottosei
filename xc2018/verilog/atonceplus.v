@@ -1,93 +1,93 @@
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
-module atonceplus(			//                     ACTV HANDLED
-							// PIN NAME    TYPE    PLTY BY      DESCRIPTION						
-							// --- ------- ------- ---- ------- --------------------------	
-							//	1	GND
-	output	P2,				//  2	Z_RW	OUT					Zorro RW output				
-	inout	P3,				//	3	M_UDS	OUT					68k UDS						 
-	output	P4,				//	4	Z_A16	OUT					Zorro A16					
-	input	P5,				//	5	6_A16	IN					286 A16						
-	input	P6,				//	6	6_S0	IN					286 S0						
-	output	P7,				//	7	Z_FC1	OUT					Zorro FC1					
-	inout	P8,				//	8	M_AS	OUT					68K AS						
-	output	P9,				//	9	P9		OUT					input U44					
-	inout	P10,			//	10	M_LDS	OUT					68k LDS						
-	input	P11,			//	11	GCLK	IN			U43		286 ~(S1&S0) bus active		
-							//	12	PWRDN						to VCC
-	inout	P13,			//	13	D2		OUT					286 D2						
-	inout	P14,			//	14	D4		OUT					286 D4						
-	input	P15,			//	15	6_S1	IN					286 S1						
-	inout	P16,			//	16	D7		OUT					286 D7						
-	input	P17,			//	17	Z_A1	IN					Zorro A1					
-	input	P18,			//	18	6_BHE	IN					286 BHE						
-	input	P19,			//	19	A0		IN			U21		286 A0						
-	inout	P20,			//	20	D0		OUT					286 D0						
-	output	P21,			//	21	6_RESET	OUT					286 Reset					
-							//	22	VCC
-	inout	P23,			//	23	D5		OUT					286	D5						
-	input	P24,			//	24	P24		IN															
-	inout	P25,			//	25	D1		OUT					286	D1						
-	inout	P26,			//	26	D6		OUT					286 D6						
-	input	P27,			//	27	P27		IN					68k Clock					
-	inout	P28,			//	28	D3		OUT					286	D3						
-	output	P29,			//	29	P29		OUT					input U44					
-	output	P30,			//	30	P30		OUT
-							//	31	M1							to VCC
-							//	32	M0							to VCC
-	output	P33,			//	33	M2		OUT												
-	output	P34,			//	34	6_HOLD	OUT					286 HOLD					
-	input	P35,			//	35	7_NPS1	IN					287 NPS1					
-	output	P36,			//	36	LDC		OUT												
-	inout	P37,			//	37	M_DTACK	OUT					68k DTACK					
-	output	P38,			//	38	P38		OUT					CAS U31 U32					
-	output	P39,			//	39	P39		OUT					CAS U33 U34					
-	output	P40,			//	40	6_READY	OUT					286 READY					
-	input	P41,			//	41	6_COD/I	IN					286 COD/INTA				
-	input	P42,			//	42	P42		IN																		
-							//	43	GND
-	input	P44,			//	44	IPL2	IN					Zorro IPL2					
-	output	P45,			//	45	P45		OUT					clk U22 U26					
-	output	P46,			//	46	P46		OUT					input U44					
-	input	P47,			//	47	P47		IN					output U22					
-	output	P48,			//	48	P48		OUT												
-	input	P49,			//	49	Z_RW	IN					Zorro RW input				
-	input	P50,			//	50	P50		IN			U22		xc2018 clock				
-	output	P51,			//	51	7_RESET	OUT					287 reset					
-	input	P52,			//	52	7_ERROR	IN					287 error					
-	input	P53,			//	53	P53		IN		LO	U22		!P53 = Z_RW & !P47			
-							//	54	RST							to zorro reset				
-							//	55	DP							to 287 NPS2					
-	input	P56,			//	56	nC1		IN      CLK n/a     286 32Mhz clk				
-	input	P57,			//	57	7_BUSY	IN					287 BUSY					
-	input	P58,			//	58	6_D11	IN					286 D11						
-	input	P59,			//	59	6_HDLA	IN					286 HDLA					
-	output	P60,			//	60	6_BUSY	OUT					286 BUSY					
-	input	P61,			//	61	P61		IN					68k lds & uds				 
-	inout	P62,			//	62	6_D9	OUT					286 D9						
-	input	P63,			//	63	6_M/IO	IN					286 M/IO					
-							//	64	VCC
-	output	P65,			//	65	P65														
-							//	66								286 A23, 					
-	input	P67,			//	67	P67		IN												
-	inout	P68,			//	68	6_D10	OUT					286 D10						
-	input	P69,			//	69	6_A21	IN					286 A21						
-	input	P70,			//	70	6_A22	IN					286	A22						
-	input	P71,			//	71	P71		IN												
-	inout	P72,			//	72	6_D8	OUT					286 D8						
-	output	P73,			//	73	6_INTR	OUT					286 INTR					
-							//	74	CCLK				U22		xc2018 clock				
-	inout	P75,			//	75	Z_A23	OUT					Zorro A23					
-	inout	P76,			//	76	Z_A22	OUT					Zorro A22					
-	inout	P77,			//	77	Z_A21	OUT					Zorro A21					
-	inout	P78,			//	78	Z_A20	OUT					Zorro A20					
-	output	P79,			//	79	Z_A19	OUT					Zorro A19					
-	input	P80,			//	80	6_A19	IN					286 A19						
-	output	P81,			//	81	Z_A18	OUT					Zorro A18					
-	input	P82,			//	82	6_A18	IN					286 A18						
-	output	P83,			//	83	Z_A17	OUT					Zorro A17					
-	input	P84				//	84	6_A17	IN					286 A17						
+module atonceplus(		//      		             ACTV HANDLED
+				// 	PIN 	NAME    TYPE    PLTY BY      	DESCRIPTION						
+				// 	---	------- ------- ---- ------- 	--------------------------	
+				//	1	GND
+	output	P2,		//  	2	Z_RW	OUT			Zorro RW output				
+	inout	P3,		//	3	M_UDS	OUT			68k UDS						 
+	output	P4,		//	4	Z_A16	OUT			Zorro A16					
+	input	P5,		//	5	6_A16	IN			286 A16						
+	input	P6,		//	6	6_S0	IN			286 S0						
+	output	P7,		//	7	Z_FC1	OUT			Zorro FC1					
+	inout	P8,		//	8	M_AS	OUT			68K AS						
+	output	P9,		//	9	P9	OUT			input U44					
+	inout	P10,		//	10	M_LDS	OUT			68k LDS						
+	input	P11,		//	11	GCLK	IN		U43	286 ~(S1&S0) bus active		
+				//	12	PWRDN				to VCC
+	inout	P13,		//	13	D2	OUT			286 D2						
+	inout	P14,		//	14	D4	OUT			286 D4						
+	input	P15,		//	15	6_S1	IN			286 S1						
+	inout	P16,		//	16	D7	OUT			286 D7						
+	input	P17,		//	17	Z_A1	IN			Zorro A1					
+	input	P18,		//	18	6_BHE	IN			286 BHE						
+	input	P19,		//	19	A0	IN		U21	286 A0						
+	inout	P20,		//	20	D0	OUT			286 D0						
+	output	P21,		//	21	6_RESET	OUT			286 Reset					
+				//	22	VCC
+	inout	P23,		//	23	D5	OUT			286	D5						
+	input	P24,		//	24	P24	IN													
+	inout	P25,		//	25	D1	OUT			286	D1						
+	inout	P26,		//	26	D6	OUT			286 D6						
+	input	P27,		//	27	P27	IN			68k Clock					
+	inout	P28,		//	28	D3	OUT			286	D3						
+	output	P29,		//	29	P29	OUT			input U44					
+	output	P30,		//	30	P30	OUT
+				//	31	M1				to VCC
+				//	32	M0				to VCC
+	output	P33,		//	33	M2	OUT												
+	output	P34,		//	34	6_HOLD	OUT			286 HOLD					
+	input	P35,		//	35	7_NPS1	IN			287 NPS1					
+	output	P36,		//	36	LDC	OUT												
+	inout	P37,		//	37	M_DTACK	OUT			68k DTACK					
+	output	P38,		//	38	P38	OUT			CAS U31 U32					
+	output	P39,		//	39	P39	OUT			CAS U33 U34					
+	output	P40,		//	40	6_READY	OUT			286 READY					
+	input	P41,		//	41	6_COD/I	IN			286 COD/INTA				
+	input	P42,		//	42	P42	IN																		
+				//	43	GND
+	input	P44,		//	44	IPL2	IN			Zorro IPL2					
+	output	P45,		//	45	P45	OUT			clk U22 U26					
+	output	P46,		//	46	P46	OUT			input U44					
+	input	P47,		//	47	P47	IN			output U22					
+	output	P48,		//	48	P48	OUT												
+	input	P49,		//	49	Z_RW	IN			Zorro RW input				
+	input	P50,		//	50	P50	IN		U22	xc2018 clock				
+	output	P51,		//	51	7_RESET	OUT			287 reset					
+	input	P52,		//	52	7_ERROR	IN			287 error					
+	input	P53,		//	53	P53	INLO		U22	!P53 = Z_RW & !P47			
+				//	54	RST				to zorro reset				
+				//	55	DP				to 287 NPS2					
+	input	P56,		//	56	nC1	IN 	  CLK n/a     	286 32Mhz clk				
+	input	P57,		//	57	7_BUSY	IN			287 BUSY					
+	input	P58,		//	58	6_D11	IN			286 D11						
+	input	P59,		//	59	6_HDLA	IN			286 HDLA					
+	output	P60,		//	60	6_BUSY	OUT			286 BUSY					
+	input	P61,		//	61	P61	IN			68k lds & uds				 
+	inout	P62,		//	62	6_D9	OUT			286 D9						
+	input	P63,		//	63	6_M/IO	IN			286 M/IO					
+				//	64	VCC
+	output	P65,		//	65	P65														
+				//	66					286 A23 					
+	input	P67,		//	67	P67	IN												
+	inout	P68,		//	68	6_D10	OUT			286 D10						
+	input	P69,		//	69	6_A21	IN			286 A21						
+	input	P70,		//	70	6_A22	IN			286	A22						
+	input	P71,		//	71	P71	IN												
+	inout	P72,		//	72	6_D8	OUT			286 D8						
+	output	P73,		//	73	6_INTR	OUT			286 INTR					
+				//	74	CCLK			U22	xc2018 clock				
+	inout	P75,		//	75	Z_A23	OUT			Zorro A23					
+	inout	P76,		//	76	Z_A22	OUT			Zorro A22					
+	inout	P77,		//	77	Z_A21	OUT			Zorro A21					
+	inout	P78,		//	78	Z_A20	OUT			Zorro A20					
+	output	P79,		//	79	Z_A19	OUT			Zorro A19					
+	input	P80,		//	80	6_A19	IN			286 A19						
+	output	P81,		//	81	Z_A18	OUT			Zorro A18					
+	input	P82,		//	82	6_A18	IN			286 A18						
+	output	P83,		//	83	Z_A17	OUT			Zorro A17					
+	input	P84		//	84	6_A17	IN			286 A17						
 );
 
 
