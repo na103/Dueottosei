@@ -1,0 +1,5 @@
+drc:        checking all nets..
+drc:        checking all blocks..
+drc:        checking interconnect..
+drc:        0 warnings
+drc:        0 fatal errors
