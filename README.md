@@ -85,6 +85,9 @@ http://obligement.free.fr/articles/atonce_plus.php
 
 https://github.com/na103/Dueottosei/blob/main/misc/review.txt
 
+a short video demo
+https://www.youtube.com/watch?v=Pk9XQjsHf10
+
 from my testing this is the best setup that has worked every time without crashing on a few hours of Windows 3.1 use
 * Amiga 500+ board rev 8a Cpu 68010 with 2Mb chip Ram
 * Kickstart and Workbench 2.05
