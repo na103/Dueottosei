@@ -112,7 +112,7 @@ The new [bitstream](https://github.com/na103/Dueottosei/blob/main/xc2018/ATPLUS2
 In to original bit stream CLB blocks configured as Base F and output (x or y) not in equation and not connected to any net, for some strange reason (maybe a makebit early version bug), have the X or Y bit output on G active.<br>  
 anyway i [patched](https://github.com/na103/Dueottosei/blob/main/xc2018/v3.00/patchdsg.py) the [dsg](https://github.com/na103/Dueottosei/blob/main/xc2018/v3.00/atplus_patch.dsg) with the new generated bitstream and it work well like the original and so i'm pretty sure it's a correct lca.<br>
 [notie](https://github.com/na103/Dueottosei/tree/main/xc2018/notie) folder contain lca file with only essential logic. cleaned from all nets and clb generated from makebits with tie option.<br>
-from notie lca have been created a [verilog](https://github.com/na103/Dueottosei/blob/main/xc2018/verilog/atonceplus.v) description.<br>
+from notie lca have been created a [verilog](https://github.com/na103/Dueottosei/tree/main/xc2018/verilog/dueottosei) description.<br>
 
 
 
