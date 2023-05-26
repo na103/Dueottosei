@@ -1,0 +1,569 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'P74'
+Slack : -1.314
+TNS   : -15.092
+
+Type  : Slow 1200mV 85C Model Setup 'P56'
+Slack : -1.250
+TNS   : -13.525
+
+Type  : Slow 1200mV 85C Model Setup 'clb_hc:clb_hc|q'
+Slack : -0.894
+TNS   : -0.894
+
+Type  : Slow 1200mV 85C Model Setup 'P27'
+Slack : -0.605
+TNS   : -0.676
+
+Type  : Slow 1200mV 85C Model Setup 'clb_ja:clb_ja|q'
+Slack : 0.016
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clb_hb:clb_hb|q'
+Slack : 0.055
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clb_jc:clb_jc|q'
+Slack : 0.066
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clb_ib:clb_ib|q'
+Slack : 0.068
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'clb_jb:clb_jb|q'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'P49'
+Slack : 0.222
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'P56'
+Slack : -0.924
+TNS   : -2.686
+
+Type  : Slow 1200mV 85C Model Hold 'P27'
+Slack : -0.048
+TNS   : -0.048
+
+Type  : Slow 1200mV 85C Model Hold 'clb_jb:clb_jb|q'
+Slack : 0.022
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clb_ja:clb_ja|q'
+Slack : 0.025
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clb_hb:clb_hb|q'
+Slack : 0.090
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clb_jc:clb_jc|q'
+Slack : 0.102
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clb_ib:clb_ib|q'
+Slack : 0.116
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clb_hc:clb_hc|q'
+Slack : 0.372
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'P74'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'P49'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'clb_ii:clb_ii|q'
+Slack : -2.193
+TNS   : -2.193
+
+Type  : Slow 1200mV 85C Model Recovery 'P56'
+Slack : -1.693
+TNS   : -1.693
+
+Type  : Slow 1200mV 85C Model Recovery 'clb_bc:clb_bc|q'
+Slack : -1.195
+TNS   : -1.195
+
+Type  : Slow 1200mV 85C Model Recovery 'clb_hc:clb_hc|q'
+Slack : -0.841
+TNS   : -0.841
+
+Type  : Slow 1200mV 85C Model Recovery 'P27'
+Slack : -0.674
+TNS   : -0.674
+
+Type  : Slow 1200mV 85C Model Recovery 'P52'
+Slack : -0.135
+TNS   : -0.135
+
+Type  : Slow 1200mV 85C Model Removal 'P56'
+Slack : 0.348
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'P52'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'P27'
+Slack : 1.137
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clb_hc:clb_hc|q'
+Slack : 1.304
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clb_bc:clb_bc|q'
+Slack : 1.491
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'clb_ii:clb_ii|q'
+Slack : 2.071
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'P74'
+Slack : -3.000
+TNS   : -39.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'P56'
+Slack : -3.000
+TNS   : -27.226
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'P49'
+Slack : -3.000
+TNS   : -18.160
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'P11'
+Slack : -3.000
+TNS   : -13.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'P27'
+Slack : -3.000
+TNS   : -7.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'P52'
+Slack : -3.000
+TNS   : -4.008
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_hc:clb_hc|q'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_ae:clb_ae|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_bc:clb_bc|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_hb:clb_hb|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_ib:clb_ib|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_ii:clb_ii|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_ja:clb_ja|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_jb:clb_jb|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clb_jc:clb_jc|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'P56'
+Slack : -1.078
+TNS   : -9.935
+
+Type  : Slow 1200mV 0C Model Setup 'P74'
+Slack : -1.042
+TNS   : -9.772
+
+Type  : Slow 1200mV 0C Model Setup 'clb_hc:clb_hc|q'
+Slack : -0.758
+TNS   : -0.758
+
+Type  : Slow 1200mV 0C Model Setup 'P27'
+Slack : -0.429
+TNS   : -0.429
+
+Type  : Slow 1200mV 0C Model Setup 'clb_ja:clb_ja|q'
+Slack : 0.089
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clb_hb:clb_hb|q'
+Slack : 0.110
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clb_jc:clb_jc|q'
+Slack : 0.121
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clb_ib:clb_ib|q'
+Slack : 0.154
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clb_jb:clb_jb|q'
+Slack : 0.196
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'P49'
+Slack : 0.309
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'P56'
+Slack : -0.862
+TNS   : -2.530
+
+Type  : Slow 1200mV 0C Model Hold 'P27'
+Slack : -0.058
+TNS   : -0.058
+
+Type  : Slow 1200mV 0C Model Hold 'clb_ja:clb_ja|q'
+Slack : -0.005
+TNS   : -0.005
+
+Type  : Slow 1200mV 0C Model Hold 'clb_jb:clb_jb|q'
+Slack : 0.020
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clb_ib:clb_ib|q'
+Slack : 0.068
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clb_hb:clb_hb|q'
+Slack : 0.075
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clb_jc:clb_jc|q'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'P74'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clb_hc:clb_hc|q'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'P49'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'clb_ii:clb_ii|q'
+Slack : -1.948
+TNS   : -1.948
+
+Type  : Slow 1200mV 0C Model Recovery 'P56'
+Slack : -1.434
+TNS   : -1.434
+
+Type  : Slow 1200mV 0C Model Recovery 'clb_bc:clb_bc|q'
+Slack : -1.096
+TNS   : -1.096
+
+Type  : Slow 1200mV 0C Model Recovery 'clb_hc:clb_hc|q'
+Slack : -0.726
+TNS   : -0.726
+
+Type  : Slow 1200mV 0C Model Recovery 'P27'
+Slack : -0.501
+TNS   : -0.501
+
+Type  : Slow 1200mV 0C Model Recovery 'P52'
+Slack : -0.097
+TNS   : -0.097
+
+Type  : Slow 1200mV 0C Model Removal 'P56'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'P52'
+Slack : 0.426
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'P27'
+Slack : 1.011
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clb_hc:clb_hc|q'
+Slack : 1.238
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clb_bc:clb_bc|q'
+Slack : 1.409
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'clb_ii:clb_ii|q'
+Slack : 1.880
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'P74'
+Slack : -3.000
+TNS   : -39.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'P56'
+Slack : -3.000
+TNS   : -27.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'P49'
+Slack : -3.000
+TNS   : -18.147
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'P11'
+Slack : -3.000
+TNS   : -13.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'P27'
+Slack : -3.000
+TNS   : -7.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'P52'
+Slack : -3.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_hc:clb_hc|q'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_ae:clb_ae|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_bc:clb_bc|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_hb:clb_hb|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_ib:clb_ib|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_ii:clb_ii|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_ja:clb_ja|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_jb:clb_jb|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clb_jc:clb_jc|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'P56'
+Slack : -0.928
+TNS   : -5.295
+
+Type  : Fast 1200mV 0C Model Setup 'P27'
+Slack : -0.344
+TNS   : -0.410
+
+Type  : Fast 1200mV 0C Model Setup 'P74'
+Slack : -0.298
+TNS   : -0.298
+
+Type  : Fast 1200mV 0C Model Setup 'clb_hc:clb_hc|q'
+Slack : 0.041
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clb_ja:clb_ja|q'
+Slack : 0.242
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clb_hb:clb_hb|q'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clb_jc:clb_jc|q'
+Slack : 0.273
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clb_ib:clb_ib|q'
+Slack : 0.285
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clb_jb:clb_jb|q'
+Slack : 0.335
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'P49'
+Slack : 0.563
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'P56'
+Slack : -0.469
+TNS   : -1.563
+
+Type  : Fast 1200mV 0C Model Hold 'P27'
+Slack : -0.034
+TNS   : -0.034
+
+Type  : Fast 1200mV 0C Model Hold 'clb_ja:clb_ja|q'
+Slack : 0.004
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clb_jb:clb_jb|q'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clb_hb:clb_hb|q'
+Slack : 0.037
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clb_ib:clb_ib|q'
+Slack : 0.045
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clb_jc:clb_jc|q'
+Slack : 0.046
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clb_hc:clb_hc|q'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'P74'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'P49'
+Slack : 0.205
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clb_ii:clb_ii|q'
+Slack : -1.379
+TNS   : -1.379
+
+Type  : Fast 1200mV 0C Model Recovery 'P56'
+Slack : -0.507
+TNS   : -0.507
+
+Type  : Fast 1200mV 0C Model Recovery 'clb_bc:clb_bc|q'
+Slack : -0.424
+TNS   : -0.424
+
+Type  : Fast 1200mV 0C Model Recovery 'P27'
+Slack : 0.017
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'clb_hc:clb_hc|q'
+Slack : 0.084
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'P52'
+Slack : 0.511
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'P52'
+Slack : 0.093
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'P56'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clb_hc:clb_hc|q'
+Slack : 0.583
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'P27'
+Slack : 0.648
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clb_ii:clb_ii|q'
+Slack : 1.060
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'clb_bc:clb_bc|q'
+Slack : 1.081
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'P74'
+Slack : -3.000
+TNS   : -57.887
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'P56'
+Slack : -3.000
+TNS   : -40.229
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'P49'
+Slack : -3.000
+TNS   : -24.120
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'P11'
+Slack : -3.000
+TNS   : -18.303
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'P27'
+Slack : -3.000
+TNS   : -8.952
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'P52'
+Slack : -3.000
+TNS   : -4.556
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_hc:clb_hc|q'
+Slack : -1.000
+TNS   : -3.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_ae:clb_ae|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_bc:clb_bc|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_hb:clb_hb|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_ib:clb_ib|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_ii:clb_ii|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_ja:clb_ja|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_jb:clb_jb|q'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clb_jc:clb_jc|q'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

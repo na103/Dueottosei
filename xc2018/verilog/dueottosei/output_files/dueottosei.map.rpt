@@ -1,0 +1,692 @@
+Analysis & Synthesis report for dueottosei
+Fri May 26 08:39:41 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 26 08:39:41 2023      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; dueottosei                                 ;
+; Top-level Entity Name              ; dueottosei                                 ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 193                                        ;
+;     Total combinational functions  ; 122                                        ;
+;     Dedicated logic registers      ; 101                                        ;
+; Total registers                    ; 101                                        ;
+; Total pins                         ; 85                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                                      ; dueottosei         ; dueottosei         ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                    ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                      ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+; dueottosei.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/dueottosei.v   ;         ;
+; clb/clb_aa.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_aa.v   ;         ;
+; clb/clb_ac.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ac.v   ;         ;
+; clb/clb_ae.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ae.v   ;         ;
+; clb/clb_af.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_af.v   ;         ;
+; clb/clb_ag.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ag.v   ;         ;
+; clb/clb_ah.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ah.v   ;         ;
+; clb/clb_aj.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_aj.v   ;         ;
+; clb/clb_ba.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ba.v   ;         ;
+; clb/clb_bc.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_bc.v   ;         ;
+; clb/clb_bd.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_bd.v   ;         ;
+; clb/clb_be.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_be.v   ;         ;
+; clb/clb_bf.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_bf.v   ;         ;
+; clb/clb_bg.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_bg.v   ;         ;
+; clb/clb_bh.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_bh.v   ;         ;
+; clb/clb_bj.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_bj.v   ;         ;
+; clb/clb_ca.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ca.v   ;         ;
+; clb/clb_cb.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_cb.v   ;         ;
+; clb/clb_cc.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_cc.v   ;         ;
+; clb/clb_cd.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_cd.v   ;         ;
+; clb/clb_ce.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ce.v   ;         ;
+; clb/clb_cf.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_cf.v   ;         ;
+; clb/clb_cg.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_cg.v   ;         ;
+; clb/clb_ch.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ch.v   ;         ;
+; clb/clb_ci.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ci.v   ;         ;
+; clb/clb_cj.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_cj.v   ;         ;
+; clb/clb_da.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_da.v   ;         ;
+; clb/clb_dc.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_dc.v   ;         ;
+; clb/clb_dd.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_dd.v   ;         ;
+; clb/clb_de.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_de.v   ;         ;
+; clb/clb_df.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_df.v   ;         ;
+; clb/clb_dh.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_dh.v   ;         ;
+; clb/clb_di.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_di.v   ;         ;
+; clb/clb_dj.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_dj.v   ;         ;
+; clb/clb_ea.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ea.v   ;         ;
+; clb/clb_eb.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_eb.v   ;         ;
+; clb/clb_ec.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ec.v   ;         ;
+; clb/clb_ed.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ed.v   ;         ;
+; clb/clb_ee.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ee.v   ;         ;
+; clb/clb_ef.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ef.v   ;         ;
+; clb/clb_ei.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ei.v   ;         ;
+; clb/clb_fa.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fa.v   ;         ;
+; clb/clb_fb.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fb.v   ;         ;
+; clb/clb_fc.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fc.v   ;         ;
+; clb/clb_fd.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fd.v   ;         ;
+; clb/clb_fe.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fe.v   ;         ;
+; clb/clb_ff.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ff.v   ;         ;
+; clb/clb_fg.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fg.v   ;         ;
+; clb/clb_fi.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fi.v   ;         ;
+; clb/clb_fj.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_fj.v   ;         ;
+; clb/clb_ga.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ga.v   ;         ;
+; clb/clb_gb.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gb.v   ;         ;
+; clb/clb_gc.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gc.v   ;         ;
+; clb/clb_gd.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gd.v   ;         ;
+; clb/clb_ge.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ge.v   ;         ;
+; clb/clb_gf.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gf.v   ;         ;
+; clb/clb_gg.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gg.v   ;         ;
+; clb/clb_gh.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gh.v   ;         ;
+; clb/clb_gi.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gi.v   ;         ;
+; clb/clb_gj.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_gj.v   ;         ;
+; clb/clb_ha.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ha.v   ;         ;
+; clb/clb_hb.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hb.v   ;         ;
+; clb/clb_hc.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hc.v   ;         ;
+; clb/clb_hd.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hd.v   ;         ;
+; clb/clb_he.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_he.v   ;         ;
+; clb/clb_hf.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hf.v   ;         ;
+; clb/clb_hg.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hg.v   ;         ;
+; clb/clb_hh.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hh.v   ;         ;
+; clb/clb_hi.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hi.v   ;         ;
+; clb/clb_hj.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_hj.v   ;         ;
+; clb/clb_ia.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ia.v   ;         ;
+; clb/clb_ib.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ib.v   ;         ;
+; clb/clb_ic.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ic.v   ;         ;
+; clb/clb_ie.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ie.v   ;         ;
+; clb/clb_if.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_if.v   ;         ;
+; clb/clb_ig.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ig.v   ;         ;
+; clb/clb_ih.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ih.v   ;         ;
+; clb/clb_ii.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ii.v   ;         ;
+; clb/clb_ij.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ij.v   ;         ;
+; clb/clb_ja.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_ja.v   ;         ;
+; clb/clb_jb.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_jb.v   ;         ;
+; clb/clb_jc.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_jc.v   ;         ;
+; clb/clb_jd.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_jd.v   ;         ;
+; clb/clb_je.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_je.v   ;         ;
+; clb/clb_jf.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_jf.v   ;         ;
+; clb/clb_jg.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/clb/clb_jg.v   ;         ;
+; iob/iob_ffin.v                   ; yes             ; User Verilog HDL File  ; C:/altera/13.1/Projects/dueottosei/iob/iob_ffin.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 193   ;
+;                                             ;       ;
+; Total combinational functions               ; 122   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 52    ;
+;     -- 3 input functions                    ; 32    ;
+;     -- <=2 input functions                  ; 38    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 122   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 101   ;
+;     -- Dedicated logic registers            ; 101   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 85    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; DONE  ;
+; Maximum fan-out                             ; 123   ;
+; Total fan-out                               ; 915   ;
+; Average fan-out                             ; 2.07  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
+; |dueottosei                ; 122 (62)          ; 101 (36)     ; 0           ; 0            ; 0       ; 0         ; 85   ; 0            ; |dueottosei                       ; work         ;
+;    |clb_aa:clb_aa|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_aa:clb_aa         ; work         ;
+;    |clb_ae:clb_ae|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ae:clb_ae         ; work         ;
+;    |clb_ah:clb_ah|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ah:clb_ah         ; work         ;
+;    |clb_ba:clb_ba|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ba:clb_ba         ; work         ;
+;    |clb_bc:clb_bc|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_bc:clb_bc         ; work         ;
+;    |clb_bd:clb_bd|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_bd:clb_bd         ; work         ;
+;    |clb_be:clb_be|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_be:clb_be         ; work         ;
+;    |clb_bf:clb_bf|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_bf:clb_bf         ; work         ;
+;    |clb_bh:clb_bh|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_bh:clb_bh         ; work         ;
+;    |clb_ca:clb_ca|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ca:clb_ca         ; work         ;
+;    |clb_cc:clb_cc|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_cc:clb_cc         ; work         ;
+;    |clb_cd:clb_cd|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_cd:clb_cd         ; work         ;
+;    |clb_ce:clb_ce|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ce:clb_ce         ; work         ;
+;    |clb_cf:clb_cf|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_cf:clb_cf         ; work         ;
+;    |clb_cg:clb_cg|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_cg:clb_cg         ; work         ;
+;    |clb_ch:clb_ch|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ch:clb_ch         ; work         ;
+;    |clb_ci:clb_ci|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ci:clb_ci         ; work         ;
+;    |clb_da:clb_da|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_da:clb_da         ; work         ;
+;    |clb_dc:clb_dc|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_dc:clb_dc         ; work         ;
+;    |clb_dd:clb_dd|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_dd:clb_dd         ; work         ;
+;    |clb_de:clb_de|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_de:clb_de         ; work         ;
+;    |clb_df:clb_df|         ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_df:clb_df         ; work         ;
+;    |clb_dh:clb_dh|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_dh:clb_dh         ; work         ;
+;    |clb_di:clb_di|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_di:clb_di         ; work         ;
+;    |clb_dj:clb_dj|         ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_dj:clb_dj         ; work         ;
+;    |clb_ea:clb_ea|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ea:clb_ea         ; work         ;
+;    |clb_eb:clb_eb|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_eb:clb_eb         ; work         ;
+;    |clb_ec:clb_ec|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ec:clb_ec         ; work         ;
+;    |clb_ee:clb_ee|         ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ee:clb_ee         ; work         ;
+;    |clb_ef:clb_ef|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ef:clb_ef         ; work         ;
+;    |clb_fa:clb_fa|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_fa:clb_fa         ; work         ;
+;    |clb_fb:clb_fb|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_fb:clb_fb         ; work         ;
+;    |clb_fd:clb_fd|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_fd:clb_fd         ; work         ;
+;    |clb_fe:clb_fe|         ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_fe:clb_fe         ; work         ;
+;    |clb_ff:clb_ff|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ff:clb_ff         ; work         ;
+;    |clb_fi:clb_fi|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_fi:clb_fi         ; work         ;
+;    |clb_ga:clb_ga|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ga:clb_ga         ; work         ;
+;    |clb_gb:clb_gb|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_gb:clb_gb         ; work         ;
+;    |clb_gc:clb_gc|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_gc:clb_gc         ; work         ;
+;    |clb_gd:clb_gd|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_gd:clb_gd         ; work         ;
+;    |clb_ge:clb_ge|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ge:clb_ge         ; work         ;
+;    |clb_gf:clb_gf|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_gf:clb_gf         ; work         ;
+;    |clb_ha:clb_ha|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ha:clb_ha         ; work         ;
+;    |clb_hb:clb_hb|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hb:clb_hb         ; work         ;
+;    |clb_hc:clb_hc|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hc:clb_hc         ; work         ;
+;    |clb_hd:clb_hd|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hd:clb_hd         ; work         ;
+;    |clb_he:clb_he|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_he:clb_he         ; work         ;
+;    |clb_hf:clb_hf|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hf:clb_hf         ; work         ;
+;    |clb_hg:clb_hg|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hg:clb_hg         ; work         ;
+;    |clb_hh:clb_hh|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hh:clb_hh         ; work         ;
+;    |clb_hi:clb_hi|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hi:clb_hi         ; work         ;
+;    |clb_hj:clb_hj|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_hj:clb_hj         ; work         ;
+;    |clb_ia:clb_ia|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ia:clb_ia         ; work         ;
+;    |clb_ib:clb_ib|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ib:clb_ib         ; work         ;
+;    |clb_ie:clb_ie|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ie:clb_ie         ; work         ;
+;    |clb_if:clb_if|         ; 3 (3)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_if:clb_if         ; work         ;
+;    |clb_ih:clb_ih|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ih:clb_ih         ; work         ;
+;    |clb_ii:clb_ii|         ; 2 (2)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ii:clb_ii         ; work         ;
+;    |clb_ij:clb_ij|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ij:clb_ij         ; work         ;
+;    |clb_ja:clb_ja|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_ja:clb_ja         ; work         ;
+;    |clb_jb:clb_jb|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_jb:clb_jb         ; work         ;
+;    |clb_jc:clb_jc|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_jc:clb_jc         ; work         ;
+;    |clb_je:clb_je|         ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_je:clb_je         ; work         ;
+;    |clb_jf:clb_jf|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|clb_jf:clb_jf         ; work         ;
+;    |iob_ffin:iob_p24_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p24_ffin ; work         ;
+;    |iob_ffin:iob_p41_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p41_ffin ; work         ;
+;    |iob_ffin:iob_p5_ffin|  ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p5_ffin  ; work         ;
+;    |iob_ffin:iob_p63_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p63_ffin ; work         ;
+;    |iob_ffin:iob_p69_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p69_ffin ; work         ;
+;    |iob_ffin:iob_p70_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p70_ffin ; work         ;
+;    |iob_ffin:iob_p71_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p71_ffin ; work         ;
+;    |iob_ffin:iob_p80_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p80_ffin ; work         ;
+;    |iob_ffin:iob_p82_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p82_ffin ; work         ;
+;    |iob_ffin:iob_p84_ffin| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |dueottosei|iob_ffin:iob_p84_ffin ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; clb_dc:clb_dc|q                                    ; P11~direct          ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 101   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 65    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Fri May 26 08:39:37 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off dueottosei -c dueottosei
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file dueottosei.v
+    Info (12023): Found entity 1: dueottosei
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_aa.v
+    Info (12023): Found entity 1: clb_aa
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ac.v
+    Info (12023): Found entity 1: clb_ac
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ae.v
+    Info (12023): Found entity 1: clb_ae
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_af.v
+    Info (12023): Found entity 1: clb_af
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ag.v
+    Info (12023): Found entity 1: clb_ag
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ah.v
+    Info (12023): Found entity 1: clb_ah
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_aj.v
+    Info (12023): Found entity 1: clb_aj
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ba.v
+    Info (12023): Found entity 1: clb_ba
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_bc.v
+    Info (12023): Found entity 1: clb_bc
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_bd.v
+    Info (12023): Found entity 1: clb_bd
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_be.v
+    Info (12023): Found entity 1: clb_be
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_bf.v
+    Info (12023): Found entity 1: clb_bf
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_bg.v
+    Info (12023): Found entity 1: clb_bg
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_bh.v
+    Info (12023): Found entity 1: clb_bh
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_bj.v
+    Info (12023): Found entity 1: clb_bj
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ca.v
+    Info (12023): Found entity 1: clb_ca
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_cb.v
+    Info (12023): Found entity 1: clb_cb
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_cc.v
+    Info (12023): Found entity 1: clb_cc
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_cd.v
+    Info (12023): Found entity 1: clb_cd
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ce.v
+    Info (12023): Found entity 1: clb_ce
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_cf.v
+    Info (12023): Found entity 1: clb_cf
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_cg.v
+    Info (12023): Found entity 1: clb_cg
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ch.v
+    Info (12023): Found entity 1: clb_ch
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ci.v
+    Info (12023): Found entity 1: clb_ci
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_cj.v
+    Info (12023): Found entity 1: clb_cj
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_da.v
+    Info (12023): Found entity 1: clb_da
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_dc.v
+    Info (12023): Found entity 1: clb_dc
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_dd.v
+    Info (12023): Found entity 1: clb_dd
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_de.v
+    Info (12023): Found entity 1: clb_de
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_df.v
+    Info (12023): Found entity 1: clb_df
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_dh.v
+    Info (12023): Found entity 1: clb_dh
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_di.v
+    Info (12023): Found entity 1: clb_di
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_dj.v
+    Info (12023): Found entity 1: clb_dj
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ea.v
+    Info (12023): Found entity 1: clb_ea
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_eb.v
+    Info (12023): Found entity 1: clb_eb
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ec.v
+    Info (12023): Found entity 1: clb_ec
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ed.v
+    Info (12023): Found entity 1: clb_ed
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ee.v
+    Info (12023): Found entity 1: clb_ee
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ef.v
+    Info (12023): Found entity 1: clb_ef
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ei.v
+    Info (12023): Found entity 1: clb_ei
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fa.v
+    Info (12023): Found entity 1: clb_fa
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fb.v
+    Info (12023): Found entity 1: clb_fb
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fc.v
+    Info (12023): Found entity 1: clb_fc
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fd.v
+    Info (12023): Found entity 1: clb_fd
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fe.v
+    Info (12023): Found entity 1: clb_fe
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ff.v
+    Info (12023): Found entity 1: clb_ff
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fg.v
+    Info (12023): Found entity 1: clb_fg
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fi.v
+    Info (12023): Found entity 1: clb_fi
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_fj.v
+    Info (12023): Found entity 1: clb_fj
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ga.v
+    Info (12023): Found entity 1: clb_ga
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gb.v
+    Info (12023): Found entity 1: clb_gb
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gc.v
+    Info (12023): Found entity 1: clb_gc
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gd.v
+    Info (12023): Found entity 1: clb_gd
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ge.v
+    Info (12023): Found entity 1: clb_ge
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gf.v
+    Info (12023): Found entity 1: clb_gf
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gg.v
+    Info (12023): Found entity 1: clb_gg
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gh.v
+    Info (12023): Found entity 1: clb_gh
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gi.v
+    Info (12023): Found entity 1: clb_gi
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_gj.v
+    Info (12023): Found entity 1: clb_gj
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ha.v
+    Info (12023): Found entity 1: clb_ha
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hb.v
+    Info (12023): Found entity 1: clb_hb
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hc.v
+    Info (12023): Found entity 1: clb_hc
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hd.v
+    Info (12023): Found entity 1: clb_hd
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_he.v
+    Info (12023): Found entity 1: clb_he
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hf.v
+    Info (12023): Found entity 1: clb_hf
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hg.v
+    Info (12023): Found entity 1: clb_hg
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hh.v
+    Info (12023): Found entity 1: clb_hh
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hi.v
+    Info (12023): Found entity 1: clb_hi
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_hj.v
+    Info (12023): Found entity 1: clb_hj
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ia.v
+    Info (12023): Found entity 1: clb_ia
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ib.v
+    Info (12023): Found entity 1: clb_ib
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ic.v
+    Info (12023): Found entity 1: clb_ic
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ie.v
+    Info (12023): Found entity 1: clb_ie
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_if.v
+    Info (12023): Found entity 1: clb_if
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ig.v
+    Info (12023): Found entity 1: clb_ig
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ih.v
+    Info (12023): Found entity 1: clb_ih
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ii.v
+    Info (12023): Found entity 1: clb_ii
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ij.v
+    Info (12023): Found entity 1: clb_ij
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_ja.v
+    Info (12023): Found entity 1: clb_ja
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_jb.v
+    Info (12023): Found entity 1: clb_jb
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_jc.v
+    Info (12023): Found entity 1: clb_jc
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_jd.v
+    Info (12023): Found entity 1: clb_jd
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_je.v
+    Info (12023): Found entity 1: clb_je
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_jf.v
+    Info (12023): Found entity 1: clb_jf
+Info (12021): Found 1 design units, including 1 entities, in source file clb/clb_jg.v
+    Info (12023): Found entity 1: clb_jg
+Info (12021): Found 1 design units, including 1 entities, in source file iob/iob_ffin.v
+    Info (12023): Found entity 1: iob_ffin
+Info (12127): Elaborating entity "dueottosei" for the top level hierarchy
+Info (12128): Elaborating entity "iob_ffin" for hierarchy "iob_ffin:iob_p5_ffin"
+Info (12128): Elaborating entity "clb_aa" for hierarchy "clb_aa:clb_aa"
+Info (12128): Elaborating entity "clb_ac" for hierarchy "clb_ac:clb_ac"
+Info (12128): Elaborating entity "clb_ae" for hierarchy "clb_ae:clb_ae"
+Info (12128): Elaborating entity "clb_af" for hierarchy "clb_af:clb_af"
+Info (12128): Elaborating entity "clb_ag" for hierarchy "clb_ag:clb_ag"
+Info (12128): Elaborating entity "clb_ah" for hierarchy "clb_ah:clb_ah"
+Info (12128): Elaborating entity "clb_aj" for hierarchy "clb_aj:clb_aj"
+Info (12128): Elaborating entity "clb_ba" for hierarchy "clb_ba:clb_ba"
+Info (12128): Elaborating entity "clb_bc" for hierarchy "clb_bc:clb_bc"
+Info (12128): Elaborating entity "clb_bd" for hierarchy "clb_bd:clb_bd"
+Info (12128): Elaborating entity "clb_be" for hierarchy "clb_be:clb_be"
+Info (12128): Elaborating entity "clb_bf" for hierarchy "clb_bf:clb_bf"
+Info (12128): Elaborating entity "clb_bg" for hierarchy "clb_bg:clb_bg"
+Info (12128): Elaborating entity "clb_bh" for hierarchy "clb_bh:clb_bh"
+Info (12128): Elaborating entity "clb_bj" for hierarchy "clb_bj:clb_bj"
+Info (12128): Elaborating entity "clb_ca" for hierarchy "clb_ca:clb_ca"
+Info (12128): Elaborating entity "clb_cb" for hierarchy "clb_cb:clb_cb"
+Info (12128): Elaborating entity "clb_cc" for hierarchy "clb_cc:clb_cc"
+Info (12128): Elaborating entity "clb_cd" for hierarchy "clb_cd:clb_cd"
+Info (12128): Elaborating entity "clb_ce" for hierarchy "clb_ce:clb_ce"
+Info (12128): Elaborating entity "clb_cf" for hierarchy "clb_cf:clb_cf"
+Info (12128): Elaborating entity "clb_cg" for hierarchy "clb_cg:clb_cg"
+Info (12128): Elaborating entity "clb_ch" for hierarchy "clb_ch:clb_ch"
+Info (12128): Elaborating entity "clb_ci" for hierarchy "clb_ci:clb_ci"
+Info (12128): Elaborating entity "clb_cj" for hierarchy "clb_cj:clb_cj"
+Info (12128): Elaborating entity "clb_da" for hierarchy "clb_da:clb_da"
+Info (12128): Elaborating entity "clb_dc" for hierarchy "clb_dc:clb_dc"
+Warning (10240): Verilog HDL Always Construct warning at clb_dc.v(18): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "q" at clb_dc.v(20)
+Info (12128): Elaborating entity "clb_dd" for hierarchy "clb_dd:clb_dd"
+Info (12128): Elaborating entity "clb_de" for hierarchy "clb_de:clb_de"
+Info (12128): Elaborating entity "clb_df" for hierarchy "clb_df:clb_df"
+Info (12128): Elaborating entity "clb_dh" for hierarchy "clb_dh:clb_dh"
+Info (12128): Elaborating entity "clb_di" for hierarchy "clb_di:clb_di"
+Info (12128): Elaborating entity "clb_dj" for hierarchy "clb_dj:clb_dj"
+Info (12128): Elaborating entity "clb_ea" for hierarchy "clb_ea:clb_ea"
+Info (12128): Elaborating entity "clb_eb" for hierarchy "clb_eb:clb_eb"
+Info (12128): Elaborating entity "clb_ec" for hierarchy "clb_ec:clb_ec"
+Info (12128): Elaborating entity "clb_ed" for hierarchy "clb_ed:clb_ed"
+Info (12128): Elaborating entity "clb_ee" for hierarchy "clb_ee:clb_ee"
+Info (12128): Elaborating entity "clb_ef" for hierarchy "clb_ef:clb_ef"
+Info (12128): Elaborating entity "clb_ei" for hierarchy "clb_ei:clb_ei"
+Info (12128): Elaborating entity "clb_fa" for hierarchy "clb_fa:clb_fa"
+Info (12128): Elaborating entity "clb_fb" for hierarchy "clb_fb:clb_fb"
+Info (12128): Elaborating entity "clb_fc" for hierarchy "clb_fc:clb_fc"
+Info (12128): Elaborating entity "clb_fd" for hierarchy "clb_fd:clb_fd"
+Info (12128): Elaborating entity "clb_fe" for hierarchy "clb_fe:clb_fe"
+Info (12128): Elaborating entity "clb_ff" for hierarchy "clb_ff:clb_ff"
+Info (12128): Elaborating entity "clb_fg" for hierarchy "clb_fg:clb_fg"
+Info (12128): Elaborating entity "clb_fi" for hierarchy "clb_fi:clb_fi"
+Info (12128): Elaborating entity "clb_fj" for hierarchy "clb_fj:clb_fj"
+Info (12128): Elaborating entity "clb_ga" for hierarchy "clb_ga:clb_ga"
+Info (12128): Elaborating entity "clb_gb" for hierarchy "clb_gb:clb_gb"
+Info (12128): Elaborating entity "clb_gc" for hierarchy "clb_gc:clb_gc"
+Info (12128): Elaborating entity "clb_gd" for hierarchy "clb_gd:clb_gd"
+Info (12128): Elaborating entity "clb_ge" for hierarchy "clb_ge:clb_ge"
+Info (12128): Elaborating entity "clb_gf" for hierarchy "clb_gf:clb_gf"
+Info (12128): Elaborating entity "clb_gg" for hierarchy "clb_gg:clb_gg"
+Info (12128): Elaborating entity "clb_gh" for hierarchy "clb_gh:clb_gh"
+Info (12128): Elaborating entity "clb_gi" for hierarchy "clb_gi:clb_gi"
+Info (12128): Elaborating entity "clb_gj" for hierarchy "clb_gj:clb_gj"
+Info (12128): Elaborating entity "clb_ha" for hierarchy "clb_ha:clb_ha"
+Info (12128): Elaborating entity "clb_hb" for hierarchy "clb_hb:clb_hb"
+Info (12128): Elaborating entity "clb_hc" for hierarchy "clb_hc:clb_hc"
+Info (12128): Elaborating entity "clb_hd" for hierarchy "clb_hd:clb_hd"
+Info (12128): Elaborating entity "clb_he" for hierarchy "clb_he:clb_he"
+Info (12128): Elaborating entity "clb_hf" for hierarchy "clb_hf:clb_hf"
+Info (12128): Elaborating entity "clb_hg" for hierarchy "clb_hg:clb_hg"
+Info (12128): Elaborating entity "clb_hh" for hierarchy "clb_hh:clb_hh"
+Info (12128): Elaborating entity "clb_hi" for hierarchy "clb_hi:clb_hi"
+Info (12128): Elaborating entity "clb_hj" for hierarchy "clb_hj:clb_hj"
+Info (12128): Elaborating entity "clb_ia" for hierarchy "clb_ia:clb_ia"
+Info (12128): Elaborating entity "clb_ib" for hierarchy "clb_ib:clb_ib"
+Info (12128): Elaborating entity "clb_ic" for hierarchy "clb_ic:clb_ic"
+Info (12128): Elaborating entity "clb_ie" for hierarchy "clb_ie:clb_ie"
+Info (12128): Elaborating entity "clb_if" for hierarchy "clb_if:clb_if"
+Info (12128): Elaborating entity "clb_ig" for hierarchy "clb_ig:clb_ig"
+Info (12128): Elaborating entity "clb_ih" for hierarchy "clb_ih:clb_ih"
+Info (12128): Elaborating entity "clb_ii" for hierarchy "clb_ii:clb_ii"
+Info (12128): Elaborating entity "clb_ij" for hierarchy "clb_ij:clb_ij"
+Info (12128): Elaborating entity "clb_ja" for hierarchy "clb_ja:clb_ja"
+Info (12128): Elaborating entity "clb_jb" for hierarchy "clb_jb:clb_jb"
+Info (12128): Elaborating entity "clb_jc" for hierarchy "clb_jc:clb_jc"
+Info (12128): Elaborating entity "clb_jd" for hierarchy "clb_jd:clb_jd"
+Info (12128): Elaborating entity "clb_je" for hierarchy "clb_je:clb_je"
+Info (12128): Elaborating entity "clb_jf" for hierarchy "clb_jf:clb_jf"
+Info (12128): Elaborating entity "clb_jg" for hierarchy "clb_jg:clb_jg"
+Info (13014): Ignored 40 buffer(s)
+    Info (13019): Ignored 40 SOFT buffer(s)
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 278 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21060): Implemented 50 bidirectional pins
+    Info (21061): Implemented 193 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4607 megabytes
+    Info: Processing ended: Fri May 26 08:39:41 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:02
+
+

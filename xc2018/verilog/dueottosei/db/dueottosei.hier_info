@@ -1,0 +1,963 @@
+|dueottosei
+P2 <= P2.DB_MAX_OUTPUT_PORT_TYPE
+P3 <> clb_ac:clb_ac.a
+P3 <> P3
+P4 <= P4.DB_MAX_OUTPUT_PORT_TYPE
+P5 <> iob_ffin:iob_p5_ffin.pad
+P5 <> P5
+P6 <> P6
+P7 <= P7.DB_MAX_OUTPUT_PORT_TYPE
+P8 <> P8
+P9 <= P9.DB_MAX_OUTPUT_PORT_TYPE
+P10 <> P10
+P11 <> P11
+P13 <> P13
+P14 <> P14
+P15 <> P15
+P16 <> P16
+P17 <> P17
+P18 <> P18
+P19 <> P19
+P20 <> P20
+P21 <= P21.DB_MAX_OUTPUT_PORT_TYPE
+P23 <> P23
+P24 <> iob_ffin:iob_p24_ffin.pad
+P24 <> P24
+P25 <> P25
+P26 <> P26
+P27 <> P27
+P28 <> P28
+P29 <= P29.DB_MAX_OUTPUT_PORT_TYPE
+P30 <= P30.DB_MAX_OUTPUT_PORT_TYPE
+P33 <= P33.DB_MAX_OUTPUT_PORT_TYPE
+P34 <= P34.DB_MAX_OUTPUT_PORT_TYPE
+P35 <> P35
+P36 <= P36.DB_MAX_OUTPUT_PORT_TYPE
+P37 <> P37
+P38 <= P38.DB_MAX_OUTPUT_PORT_TYPE
+P39 <= P39.DB_MAX_OUTPUT_PORT_TYPE
+P40 <= P40.DB_MAX_OUTPUT_PORT_TYPE
+P41 <> iob_ffin:iob_p41_ffin.pad
+P41 <> P41
+P42 <> P42
+P44 <> P44
+P45 <= P45.DB_MAX_OUTPUT_PORT_TYPE
+P46 <= P46.DB_MAX_OUTPUT_PORT_TYPE
+P47 <> P47
+P48 <= P48.DB_MAX_OUTPUT_PORT_TYPE
+P49 <> P49
+P50 <> P50
+P51 <= P51.DB_MAX_OUTPUT_PORT_TYPE
+P52 <> P52
+P53 <> P53
+P54 => comb.DATAIN
+P55 <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+P56 <> P56
+P57 <> P57
+P58 <> P58
+P59 <> P59
+P60 <= P60.DB_MAX_OUTPUT_PORT_TYPE
+P61 <> P61
+P62 <> P62
+P63 <> iob_ffin:iob_p63_ffin.pad
+P63 <> P63
+P65 <= P65.DB_MAX_OUTPUT_PORT_TYPE
+P66 <= P66.DB_MAX_OUTPUT_PORT_TYPE
+P67 <> P67
+P68 <> P68
+P69 <> iob_ffin:iob_p69_ffin.pad
+P69 <> P69
+P70 <> iob_ffin:iob_p70_ffin.pad
+P70 <> P70
+P71 <> iob_ffin:iob_p71_ffin.pad
+P71 <> P71
+P72 <> P72
+P73 <= P73.DB_MAX_OUTPUT_PORT_TYPE
+P74 => DONE.CLK
+P74 => last_data[0].CLK
+P74 => last_data[1].CLK
+P74 => last_data[2].CLK
+P74 => last_data[3].CLK
+P74 => last_data[4].CLK
+P74 => last_data[5].CLK
+P74 => last_data[6].CLK
+P74 => last_data[7].CLK
+P74 => last_data[8].CLK
+P74 => last_data[9].CLK
+P74 => last_data[10].CLK
+P74 => last_data[11].CLK
+P74 => last_data[12].CLK
+P74 => last_data[13].CLK
+P74 => last_data[14].CLK
+P74 => last_data[15].CLK
+P74 => last_data[16].CLK
+P74 => last_data[17].CLK
+P74 => last_data[18].CLK
+P74 => last_data[19].CLK
+P74 => last_data[20].CLK
+P74 => last_data[21].CLK
+P74 => last_data[22].CLK
+P74 => last_data[23].CLK
+P74 => last_data[24].CLK
+P74 => last_data[25].CLK
+P74 => last_data[26].CLK
+P74 => last_data[27].CLK
+P74 => last_data[28].CLK
+P74 => last_data[29].CLK
+P74 => last_data[30].CLK
+P74 => last_data[31].CLK
+P74 => last_data[32].CLK
+P74 => last_data[33].CLK
+P74 => last_data[34].CLK
+P75 <> P75
+P76 <> P76
+P77 <> P77
+P78 <> P78
+P79 <= P79.DB_MAX_OUTPUT_PORT_TYPE
+P80 <> iob_ffin:iob_p80_ffin.pad
+P80 <> P80
+P81 <= P81.DB_MAX_OUTPUT_PORT_TYPE
+P82 <> iob_ffin:iob_p82_ffin.pad
+P82 <> P82
+P83 <= P83.DB_MAX_OUTPUT_PORT_TYPE
+P84 <> iob_ffin:iob_p84_ffin.pad
+P84 <> P84
+LED[0] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+LED[1] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+LED[2] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+LED[3] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+LED[4] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+LED[5] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+LED[6] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+LED[7] <= DONE.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p5_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p24_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p41_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p63_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p69_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p70_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p71_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p80_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p82_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|iob_ffin:iob_p84_ffin
+pad => in~reg0.DATAIN
+k => in~reg0.CLK
+rst => in~reg0.ACLR
+in <= in~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_aa:clb_aa
+b => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ac:clb_ac
+a => g.IN1
+b => g.IN0
+c => f.IN0
+c => g.IN1
+d => f.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ae:clb_ae
+b => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_af:clb_af
+a => f.IN0
+a => f.IN0
+b => f.IN1
+b => f.IN0
+b => f.IN0
+c => f.IN1
+c => f.IN1
+d => f.IN1
+d => f.IN1
+x <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ag:clb_ag
+a => f.IN0
+b => f.IN1
+c => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ah:clb_ah
+b => g.IN0
+c => g.IN1
+c => g.IN1
+d => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_aj:clb_aj
+a => f.IN0
+b => f.IN0
+c => f.IN1
+d => f.IN1
+x <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ba:clb_ba
+c => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_bc:clb_bc
+c => q.DATAIN
+d => always0.IN0
+k => q.CLK
+rst => always0.IN1
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_bd:clb_bd
+a => q.DATAIN
+c => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_be:clb_be
+a => f.IN0
+a => f.IN1
+b => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_bf:clb_bf
+a => f.IN0
+a => f.IN0
+b => f.IN0
+b => f.IN1
+c => f.IN1
+c => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_bg:clb_bg
+a => f.IN0
+a => f.IN0
+b => f.IN1
+b => f.IN0
+b => f.IN1
+c => f.IN1
+d => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_bh:clb_bh
+a => q.DATAIN
+b => g.IN0
+c => g.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_bj:clb_bj
+a => f.IN1
+a => f.IN0
+b => f.IN1
+c => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ca:clb_ca
+c => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_cb:clb_cb
+a => g.IN0
+a => f.IN0
+b => f.IN1
+c => f.IN1
+c => g.IN1
+d => g.IN1
+x <= f.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_cc:clb_cc
+b => q.DATAIN
+b => g.IN0
+c => g.IN1
+k => q.CLK
+rst => q.ACLR
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_cd:clb_cd
+c => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ce:clb_ce
+a => f.IN0
+b => f.IN1
+b => f.IN0
+b => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_cf:clb_cf
+a => f.IN0
+c => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_cg:clb_cg
+a => f.IN0
+a => g.IN0
+c => g.IN1
+d => f.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ch:clb_ch
+b => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ci:clb_ci
+a => f.IN0
+a => g.IN0
+a => g.IN0
+b => f.IN1
+b => g.IN0
+b => g.IN1
+c => f.IN1
+c => f.IN1
+d => g.IN1
+d => g.IN1
+d => g.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_cj:clb_cj
+a => f.IN0
+a => f.IN0
+a => f.IN0
+a => f.IN0
+b => f.IN1
+c => f.IN1
+c => f.IN1
+d => f.IN1
+d => f.IN1
+d => f.IN1
+x <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_da:clb_da
+b => g.IN1
+c => q.CLK
+rst => q.ACLR
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_dc:clb_dc
+a => q.DATAIN
+b => g.IN1
+c => g.IN1
+k => q.LATCH_ENABLE
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_dd:clb_dd
+a => f.IN0
+d => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_de:clb_de
+d => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_df:clb_df
+a => f.IN0
+b => f.IN1
+c => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_dh:clb_dh
+a => q.DATAIN
+a => g.IN0
+d => g.IN1
+k => q.CLK
+rst => q.ACLR
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_di:clb_di
+a => g.IN0
+b => q.DATAIN
+c => g.IN1
+k => q.CLK
+rst => q.ACLR
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_dj:clb_dj
+b => f.IN1
+b => f.IN0
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ea:clb_ea
+c => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_eb:clb_eb
+a => f.IN0
+b => f.IN1
+c => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ec:clb_ec
+a => f.IN0
+c => f.IN1
+d => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ed:clb_ed
+a => f.IN0
+b => f.IN1
+c => f.IN0
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ee:clb_ee
+a => f.IN1
+a => f.IN0
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ef:clb_ef
+a => f.IN0
+b => f.IN1
+c => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ei:clb_ei
+a => f.IN0
+b => f.IN1
+c => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fa:clb_fa
+b => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fb:clb_fb
+a => f.IN1
+b => f.IN1
+c => g.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fc:clb_fc
+a => f.IN0
+b => g.IN0
+c => f.IN1
+d => g.IN1
+d => f.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fd:clb_fd
+a => g.IN0
+c => g.IN1
+d => always0.IN0
+k => q.CLK
+rst => always0.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fe:clb_fe
+a => f.IN0
+a => f.IN0
+b => f.IN1
+c => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ff:clb_ff
+a => g.IN0
+b => f.IN0
+b => f.IN0
+c => f.IN0
+c => f.IN1
+d => f.IN1
+d => f.IN1
+d => g.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fg:clb_fg
+a => f.IN0
+b => f.IN1
+c => f.IN0
+c => f.IN1
+d => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fi:clb_fi
+b => g.IN0
+c => f.IN0
+c => g.IN1
+d => f.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_fj:clb_fj
+b => f.IN0
+d => f.IN1
+x <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ga:clb_ga
+b => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gb:clb_gb
+a => q.DATAIN
+a => y.DATAIN
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gc:clb_gc
+a => g.IN0
+a => f.IN0
+c => f.IN1
+d => f.IN1
+d => g.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gd:clb_gd
+c => g.IN1
+c => q.CLK
+d => always0.IN0
+rst => always0.IN1
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ge:clb_ge
+b => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gf:clb_gf
+b => f.IN1
+b => f.IN0
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gg:clb_gg
+a => g.IN0
+a => f.IN0
+b => g.IN1
+c => g.IN1
+d => f.IN1
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gh:clb_gh
+c => f.IN0
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gi:clb_gi
+a => f.IN0
+a => f.IN0
+a => f.IN0
+b => f.IN1
+c => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_gj:clb_gj
+b => f.IN0
+b => f.IN0
+c => f.IN1
+c => f.IN0
+d => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ha:clb_ha
+c => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hb:clb_hb
+c => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hc:clb_hc
+c => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hd:clb_hd
+b => f.IN0
+c => g.IN0
+d => f.IN1
+d => g.IN1
+x <= f.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_he:clb_he
+a => f.IN1
+a => f.IN0
+b => f.IN1
+b => f.IN0
+c => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hf:clb_hf
+a => f.IN0
+c => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hg:clb_hg
+a => f.IN0
+b => f.IN1
+b => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hh:clb_hh
+a => f.IN0
+a => f.IN0
+b => f.IN1
+b => f.IN0
+b => f.IN0
+c => f.IN0
+c => f.IN1
+d => f.IN1
+d => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hi:clb_hi
+a => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_hj:clb_hj
+a => f.IN0
+a => g.IN0
+b => g.IN1
+c => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ia:clb_ia
+c => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ib:clb_ib
+c => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ic:clb_ic
+a => y.DATAIN
+y <= a.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ie:clb_ie
+d => q.DATAIN
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_if:clb_if
+a => g.IN0
+b => q.ENA
+c => g.IN1
+k => q.CLK
+rst => always0.IN1
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ig:clb_ig
+a => f.IN0
+a => x.DATAIN
+c => f.IN1
+x <= a.DB_MAX_OUTPUT_PORT_TYPE
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ih:clb_ih
+a => g.IN0
+c => q.CLK
+d => g.IN1
+rst => always0.IN1
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ii:clb_ii
+a => g.IN0
+b => g.IN1
+c => q.CLK
+d => q.DATAIN
+rst => always0.IN1
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ij:clb_ij
+a => f.IN1
+a => f.IN0
+b => f.IN1
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_ja:clb_ja
+c => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_jb:clb_jb
+c => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_jc:clb_jc
+k => q.CLK
+rst => q.ACLR
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_jd:clb_jd
+c => f.IN0
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_je:clb_je
+a => g.IN1
+b => f.IN0
+c => f.IN1
+k => q.CLK
+rst => q.ACLR
+x <= g.DB_MAX_OUTPUT_PORT_TYPE
+y <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_jf:clb_jf
+b => q.DATAIN
+b => g.IN0
+c => g.IN1
+c => g.IN1
+k => q.CLK
+rst => q.ACLR
+x <= q.DB_MAX_OUTPUT_PORT_TYPE
+y <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|dueottosei|clb_jg:clb_jg
+a => f.IN0
+b => f.IN1
+c => f.IN1
+d => f.IN1
+y <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

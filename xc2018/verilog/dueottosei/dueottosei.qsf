@@ -1,0 +1,363 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+# Date created = 08:08:39  May 24, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		dueottosei_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:13:13  MAY 15, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_L3 -to LED[7]
+set_location_assignment PIN_B1 -to LED[6]
+set_location_assignment PIN_F3 -to LED[5]
+set_location_assignment PIN_D1 -to LED[4]
+set_location_assignment PIN_A11 -to LED[3]
+set_location_assignment PIN_B13 -to LED[2]
+set_location_assignment PIN_A13 -to LED[1]
+set_location_assignment PIN_A15 -to LED[0]
+set_location_assignment PIN_D15 -to P2
+set_location_assignment PIN_F15 -to P3
+set_location_assignment PIN_G16 -to P4
+set_location_assignment PIN_F14 -to P5
+set_location_assignment PIN_G15 -to P6
+set_location_assignment PIN_J14 -to P7
+set_location_assignment PIN_J16 -to P8
+set_location_assignment PIN_K15 -to P9
+set_location_assignment PIN_M10 -to P10
+set_location_assignment PIN_L13 -to P11
+set_location_assignment PIN_N14 -to P13
+set_location_assignment PIN_N15 -to P14
+set_location_assignment PIN_P14 -to P15
+set_location_assignment PIN_R14 -to P16
+set_location_assignment PIN_N16 -to P17
+set_location_assignment PIN_R10 -to P18
+set_location_assignment PIN_P11 -to P19
+set_location_assignment PIN_P9 -to P20
+set_location_assignment PIN_N12 -to P21
+set_location_assignment PIN_N11 -to P23
+set_location_assignment PIN_N9 -to P24
+set_location_assignment PIN_K16 -to P25
+set_location_assignment PIN_L16 -to P26
+set_location_assignment PIN_L15 -to P27
+set_location_assignment PIN_R16 -to P28
+set_location_assignment PIN_P16 -to P29
+set_location_assignment PIN_P15 -to P30
+set_location_assignment PIN_F13 -to P33
+set_location_assignment PIN_T15 -to P34
+set_location_assignment PIN_T14 -to P35
+set_location_assignment PIN_T13 -to P36
+set_location_assignment PIN_R13 -to P37
+set_location_assignment PIN_T12 -to P38
+set_location_assignment PIN_R12 -to P39
+set_location_assignment PIN_T11 -to P40
+set_location_assignment PIN_T10 -to P41
+set_location_assignment PIN_R11 -to P42
+set_location_assignment PIN_C9 -to P44
+set_location_assignment PIN_D9 -to P45
+set_location_assignment PIN_E11 -to P46
+set_location_assignment PIN_E10 -to P47
+set_location_assignment PIN_C11 -to P48
+set_location_assignment PIN_B11 -to P49
+set_location_assignment PIN_A12 -to P50
+set_location_assignment PIN_D11 -to P51
+set_location_assignment PIN_D12 -to P52
+set_location_assignment PIN_B12 -to P53
+set_location_assignment PIN_B7 -to P54
+set_location_assignment PIN_D6 -to P55
+set_location_assignment PIN_A7 -to P56
+set_location_assignment PIN_C6 -to P57
+set_location_assignment PIN_C8 -to P58
+set_location_assignment PIN_E6 -to P59
+set_location_assignment PIN_E7 -to P60
+set_location_assignment PIN_D8 -to P61
+set_location_assignment PIN_E8 -to P62
+set_location_assignment PIN_F8 -to P63
+set_location_assignment PIN_E9 -to P65
+set_location_assignment PIN_A6 -to P66
+set_location_assignment PIN_B6 -to P67
+set_location_assignment PIN_D5 -to P68
+set_location_assignment PIN_A5 -to P69
+set_location_assignment PIN_B5 -to P70
+set_location_assignment PIN_A4 -to P71
+set_location_assignment PIN_B4 -to P72
+set_location_assignment PIN_B3 -to P73
+set_location_assignment PIN_A3 -to P74
+set_location_assignment PIN_A2 -to P75
+set_location_assignment PIN_C3 -to P76
+set_location_assignment PIN_D3 -to P77
+set_location_assignment PIN_B16 -to P78
+set_location_assignment PIN_A14 -to P79
+set_location_assignment PIN_C16 -to P80
+set_location_assignment PIN_C14 -to P81
+set_location_assignment PIN_D16 -to P82
+set_location_assignment PIN_C15 -to P83
+set_location_assignment PIN_D14 -to P84
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name TOP_LEVEL_ENTITY dueottosei
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE22F17C6
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+	set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+	set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# ------------------------
+# start ENTITY(dueottosei)
+
+	# Fitter Assignments
+	# ==================
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[7]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[6]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[5]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[4]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[3]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[2]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[1]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED[0]
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P2
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P3
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P4
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P5
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P6
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P7
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P8
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P9
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P10
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P11
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P13
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P14
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P15
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P16
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P17
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P18
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P19
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P20
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P21
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P23
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P24
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P25
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P26
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P27
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P28
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P29
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P30
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P33
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P34
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P35
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P36
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P37
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P38
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P39
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P40
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P41
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P42
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P44
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P45
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P46
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P47
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P48
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P49
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P50
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P51
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P52
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P53
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P54
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P55
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P56
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P57
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P58
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P59
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P60
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P61
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P62
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P63
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P65
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P66
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P67
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P68
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P69
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P70
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P71
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P72
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P73
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P74
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P75
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P76
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P77
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P78
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P79
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P80
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P81
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P82
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P83
+	set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to P84
+
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+		set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+		set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+		set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+
+# end ENTITY(dueottosei)
+# ----------------------
+set_global_assignment -name VERILOG_FILE dueottosei.v
+set_global_assignment -name VERILOG_FILE clb/clb_aa.v
+set_global_assignment -name VERILOG_FILE clb/clb_ac.v
+set_global_assignment -name VERILOG_FILE clb/clb_ae.v
+set_global_assignment -name VERILOG_FILE clb/clb_af.v
+set_global_assignment -name VERILOG_FILE clb/clb_ag.v
+set_global_assignment -name VERILOG_FILE clb/clb_ah.v
+set_global_assignment -name VERILOG_FILE clb/clb_aj.v
+set_global_assignment -name VERILOG_FILE clb/clb_ba.v
+set_global_assignment -name VERILOG_FILE clb/clb_bc.v
+set_global_assignment -name VERILOG_FILE clb/clb_bd.v
+set_global_assignment -name VERILOG_FILE clb/clb_be.v
+set_global_assignment -name VERILOG_FILE clb/clb_bf.v
+set_global_assignment -name VERILOG_FILE clb/clb_bg.v
+set_global_assignment -name VERILOG_FILE clb/clb_bh.v
+set_global_assignment -name VERILOG_FILE clb/clb_bj.v
+set_global_assignment -name VERILOG_FILE clb/clb_ca.v
+set_global_assignment -name VERILOG_FILE clb/clb_cb.v
+set_global_assignment -name VERILOG_FILE clb/clb_cc.v
+set_global_assignment -name VERILOG_FILE clb/clb_cd.v
+set_global_assignment -name VERILOG_FILE clb/clb_ce.v
+set_global_assignment -name VERILOG_FILE clb/clb_cf.v
+set_global_assignment -name VERILOG_FILE clb/clb_cg.v
+set_global_assignment -name VERILOG_FILE clb/clb_ch.v
+set_global_assignment -name VERILOG_FILE clb/clb_ci.v
+set_global_assignment -name VERILOG_FILE clb/clb_cj.v
+set_global_assignment -name VERILOG_FILE clb/clb_da.v
+set_global_assignment -name VERILOG_FILE clb/clb_dc.v
+set_global_assignment -name VERILOG_FILE clb/clb_dd.v
+set_global_assignment -name VERILOG_FILE clb/clb_de.v
+set_global_assignment -name VERILOG_FILE clb/clb_df.v
+set_global_assignment -name VERILOG_FILE clb/clb_dh.v
+set_global_assignment -name VERILOG_FILE clb/clb_di.v
+set_global_assignment -name VERILOG_FILE clb/clb_dj.v
+set_global_assignment -name VERILOG_FILE clb/clb_ea.v
+set_global_assignment -name VERILOG_FILE clb/clb_eb.v
+set_global_assignment -name VERILOG_FILE clb/clb_ec.v
+set_global_assignment -name VERILOG_FILE clb/clb_ed.v
+set_global_assignment -name VERILOG_FILE clb/clb_ee.v
+set_global_assignment -name VERILOG_FILE clb/clb_ef.v
+set_global_assignment -name VERILOG_FILE clb/clb_ei.v
+set_global_assignment -name VERILOG_FILE clb/clb_fa.v
+set_global_assignment -name VERILOG_FILE clb/clb_fb.v
+set_global_assignment -name VERILOG_FILE clb/clb_fc.v
+set_global_assignment -name VERILOG_FILE clb/clb_fd.v
+set_global_assignment -name VERILOG_FILE clb/clb_fe.v
+set_global_assignment -name VERILOG_FILE clb/clb_ff.v
+set_global_assignment -name VERILOG_FILE clb/clb_fg.v
+set_global_assignment -name VERILOG_FILE clb/clb_fi.v
+set_global_assignment -name VERILOG_FILE clb/clb_fj.v
+set_global_assignment -name VERILOG_FILE clb/clb_ga.v
+set_global_assignment -name VERILOG_FILE clb/clb_gb.v
+set_global_assignment -name VERILOG_FILE clb/clb_gc.v
+set_global_assignment -name VERILOG_FILE clb/clb_gd.v
+set_global_assignment -name VERILOG_FILE clb/clb_ge.v
+set_global_assignment -name VERILOG_FILE clb/clb_gf.v
+set_global_assignment -name VERILOG_FILE clb/clb_gg.v
+set_global_assignment -name VERILOG_FILE clb/clb_gh.v
+set_global_assignment -name VERILOG_FILE clb/clb_gi.v
+set_global_assignment -name VERILOG_FILE clb/clb_gj.v
+set_global_assignment -name VERILOG_FILE clb/clb_ha.v
+set_global_assignment -name VERILOG_FILE clb/clb_hb.v
+set_global_assignment -name VERILOG_FILE clb/clb_hc.v
+set_global_assignment -name VERILOG_FILE clb/clb_hd.v
+set_global_assignment -name VERILOG_FILE clb/clb_he.v
+set_global_assignment -name VERILOG_FILE clb/clb_hf.v
+set_global_assignment -name VERILOG_FILE clb/clb_hg.v
+set_global_assignment -name VERILOG_FILE clb/clb_hh.v
+set_global_assignment -name VERILOG_FILE clb/clb_hi.v
+set_global_assignment -name VERILOG_FILE clb/clb_hj.v
+set_global_assignment -name VERILOG_FILE clb/clb_ia.v
+set_global_assignment -name VERILOG_FILE clb/clb_ib.v
+set_global_assignment -name VERILOG_FILE clb/clb_ic.v
+set_global_assignment -name VERILOG_FILE clb/clb_ie.v
+set_global_assignment -name VERILOG_FILE clb/clb_if.v
+set_global_assignment -name VERILOG_FILE clb/clb_ig.v
+set_global_assignment -name VERILOG_FILE clb/clb_ih.v
+set_global_assignment -name VERILOG_FILE clb/clb_ii.v
+set_global_assignment -name VERILOG_FILE clb/clb_ij.v
+set_global_assignment -name VERILOG_FILE clb/clb_ja.v
+set_global_assignment -name VERILOG_FILE clb/clb_jb.v
+set_global_assignment -name VERILOG_FILE clb/clb_jc.v
+set_global_assignment -name VERILOG_FILE clb/clb_jd.v
+set_global_assignment -name VERILOG_FILE clb/clb_je.v
+set_global_assignment -name VERILOG_FILE clb/clb_jf.v
+set_global_assignment -name VERILOG_FILE clb/clb_jg.v
+set_global_assignment -name VERILOG_FILE iob/iob_ffin.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
