@@ -132,85 +132,51 @@ module dueottosei(				//                     HANDLED
 	
 	assign P5 = (!DONE) ? 1'b1 : 1'bz;													// I/O PIN
 	wire p5_in;
-	iob_ffin iob_p5_ffin(.pad(P5), .k(p11_in), .in(p5_in), .rst(P54_in));
+	iob_ffin iob_p5_ffin(.pad(P5), .k(P11), .in(p5_in), .rst(P54));
 	
 	assign P6 = (!DONE) ? 1'b1 : 1'bz;													// I/O PIN
-	wire p6_in;
-	buf(p6_in, P6);
 	
 	assign P7 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? fi_y : 1'bz;					// I/O PIN							Z_FC1	OUT
 	
 	assign P8 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? bc_y : 1'bz; 					// I/O PIN							M_AS	OUT
-	wire p8_in;
-	buf(p8_in, P8);
 	
 	assign P9 = (!DONE) ? 1'b1 : fi_x; 													// I/O PIN							P9	OUT needed high with LCA unconfigured
 	
 	assign P10 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? cc_x : 1'bz;					//	I/O PIN							M_LDS	OUT
-	wire p10_in;
-	buf(p10_in, P10);
 	
 	assign P11 = (!DONE) ? 1'b1 : 1'bz;													//	I/O PIN							M_LDS	OUT
-	wire p11_in;
-	buf(p11_in, P11);
 	
 	assign P13 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? aa_y : 1'bz; 					// I/O PIN							D2	OUT
-	wire p13_in;
-	buf(p13_in, P13);
 	
 	assign P14 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? ba_y : 1'bz;					// I/O PIN							D4	OUT
-	wire p14_in;
-	buf(p14_in, P14);
-	
+
 	assign P15 = (!DONE) ? 1'b1 : 1'bz;													// I/O PIN
-	wire p15_in;
-	buf(p15_in, P15);
 	
 	assign P16 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? ca_y : 1'bz;					// I/O PIN 							D7	OUT
-	wire p16_in;
-	buf(p16_in, P16);
 	
 	assign P17 = (!DONE) ? 1'b1 : 1'bz;													// I/O PIN
-	wire p17_in;
-	buf(p17_in, P17);
 	
 	assign P18 = (!DONE) ? 1'b1 : 1'bz;													// I/O PIN 
-	wire p18_in;
-	buf(p18_in, P18);
 	
 	assign P19 = (!DONE) ? 1'b1 : 1'bz;													// I/O PIN 
-	wire p19_in;
-	buf(p19_in, P19);
 	
 	assign P20 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? ea_y : 1'bz;					// I/O PIN 							D0	OUT
-	wire p20_in;
-	buf(p20_in, P20);
 	
 	assign P21 = (!DONE) ? 1'b1 : da_y;									 				// I/O PIN							6_RESET	
 	
 	assign P23 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? fa_y : 1'bz;
-	wire p23_in;
-	buf(p23_in, P23);
 	
 	assign P24 = (!DONE) ? 1'b1 : 1'bz;
 	wire p24_in;
-	iob_ffin iob_p24_ffin(.pad(P24), .k(p11_in), .in(p24_in), .rst(P54_in));
+	iob_ffin iob_p24_ffin(.pad(P24), .k(P11), .in(p24_in), .rst(P54));
 	
 	assign P25 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? ga_y : 1'bz;
-	wire p25_in;
-	buf(p25_in, P25);
 	
 	assign P26 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? ha_y : 1'bz;
-	wire p26_in;
-	buf(p26_in, P26);
 	
 	assign P27 = (!DONE) ? 1'b1 : 1'bz;
-	wire p27_in;
-	buf(p27_in, P27);
-	
+
 	assign P28 = (!DONE) ? 1'b1 : (hd_x == 1'b0) ? ia_y : 1'bz;
-	wire p28_in;
-	buf(p28_in, P28);
 	
 	assign P29 = (!DONE) ? 1'b1 : fc_y;
 	assign P30 = (!DONE) ? 1'b1 : di_y;
@@ -218,169 +184,122 @@ module dueottosei(				//                     HANDLED
 	assign P34 = (!DONE) ? 1'b1 : ic_y;													//HDC high unconfigured
 	
 	assign P35 = (!DONE) ? 1'b1 : 1'bz;													// NPS1	IN	stay High or no boot
-	wire p35_in;
-	buf(p35_in, P35);
 	
 	assign P36 = (!DONE) ? 1'b0 : hd_y;													//LDC low unconfigured
 	
 	assign P37 = (!DONE) ? 1'b1 : (gf_x == 1'b0) ? gf_x : 1'bz;					//DTACK	OUT
-	wire p37_in;
-	buf(p37_in, P37);
-	
+
 	assign P38 = (!DONE) ? 1'b1 : jd_y;									 				// CAS U31 U32
 	assign P39 = (!DONE) ? 1'b1 : je_x;									 				//CAS U33 U34
 	assign P40 = (!DONE) ? 1'b1 : gb_y;
 	
 	assign P41 = (!DONE) ? 1'b1 : 1'bz;
 	wire p41_in;
-	iob_ffin iob_p41_ffin(.pad(P41), .k(p11_in), .in(p41_in), .rst(P54_in));
+	iob_ffin iob_p41_ffin(.pad(P41), .k(P11), .in(p41_in), .rst(P54));
 	
 	assign P42 = (!DONE) ? 1'b1 : 1'bz;
-	wire p42_in;
-	buf(p42_in, P42);
 	
 	assign P44 = (!DONE) ? 1'b1 : 1'bz;
-	wire p44_in;
-	buf(p44_in, P44);
 	
 	assign P45 = (!DONE) ? 1'b1 : gd_y;
 	assign P46 = (!DONE) ? 1'b1 : ig_x;
 	
 	assign P47 = (!DONE) ? 1'b1 : 1'bz;
-	wire p47_in;
-	buf(p47_in, P47);
-	
+
 	assign P48 = (!DONE) ? 1'b1 : jf_y;							 				//RAS U31 U32 U33 U34
 	
 	assign P49 = (!DONE) ? 1'b1 : 1'bz;
-	wire p49_in;
-	buf(p49_in, P49);
-	
+
 	assign P50 = (!DONE) ? 1'b1 : 1'bz;
-	wire p50_in;
-	buf(p50_in, P50);
 	
 	assign P51 = (!DONE) ? 1'b1 : hi_y;
 	
 	assign P52 = (!DONE) ? 1'b1 : 1'bz;
-	wire p52_in;
-	buf(p52_in, P52);
 	
 	assign P53 = (!DONE) ? 1'b1 : 1'bz;
-	wire p53_in;
-	buf(p53_in, P53);
 	
 	assign P55 = (!DONE) ? 1'b0 : 1'b1;											//DONE _PROG
 	
-	wire P54_in;
-	buf(P54_in, P54);																	// LCA Reset
-	
 	assign P56 = (!DONE) ? 1'b1 : 1'bz;
-	wire p56_in;
-	buf(p56_in, P56);
-	
+		
 	assign P57 = (!DONE) ? 1'b1 : 1'bz;
-	wire p57_in;
-	buf(p57_in, P57);
-	
+
 	assign P58 = (!DONE) ? 1'b1 : 1'bz;
-	wire p58_in;
-	buf(p58_in, P58);
 	
 	assign P59 = (!DONE) ? 1'b1 : 1'bz;
-	wire p59_in;
-	buf(p59_in, P59);
 	
-	assign P60 = (!DONE) ? 1'b1 : p57_in;
+	assign P60 = (!DONE) ? 1'b1 : P57;
 	
 	assign P61 = (!DONE) ? 1'b1 : 1'bz;
-	wire p61_in;
-	buf(p61_in, P61);
-	
+
 	assign P62 = (!DONE) ? 1'b1 : (gh_y == 1'b0) ? gi_y : 1'bz;
-	wire p62_in;
-	buf(p62_in, P62);
 	
 	assign P63 = (!DONE) ? 1'b1 : 1'bz;
 	wire p63_in;
-	iob_ffin iob_p63_ffin(.pad(P63), .k(p11_in), .in(p63_in), .rst(P54_in));
+	iob_ffin iob_p63_ffin(.pad(P63), .k(P11), .in(p63_in), .rst(P54));
 	
 	assign P65 = (!DONE) ? 1'b1 : aj_x;
 	assign P66 = (!DONE) ? 1'b1 : 1'bz;
 	
 	assign P67 = (!DONE) ? 1'b1 : 1'bz;
-	wire p67_in;
-	buf(p67_in, P67);
 	
 	assign P68 = (!DONE) ? 1'b1 : (gh_y == 1'b0) ? dj_x : 1'bz;
-	wire p68_in;
-	buf(p68_in, P68);
-	
+
 	assign P69 = (!DONE) ? 1'b1 : 1'bz;
 	wire p69_in;
-	iob_ffin iob_p69_ffin(.pad(P69), .k(p11_in), .in(p69_in), .rst(P54_in));
+	iob_ffin iob_p69_ffin(.pad(P69), .k(P11), .in(p69_in), .rst(P54));
 	
 	assign P70 = (!DONE) ? 1'b1 : 1'bz;
 	wire p70_in;
-	iob_ffin iob_p70_ffin(.pad(P70), .k(p11_in), .in(p70_in), .rst(P54_in));
+	iob_ffin iob_p70_ffin(.pad(P70), .k(P11), .in(p70_in), .rst(P54));
 	
 	assign P71 = (!DONE) ? 1'b1 : 1'bz;
 	wire p71_in;
-	iob_ffin iob_p71_ffin(.pad(P71), .k(p11_in), .in(p71_in), .rst(P54_in));
+	iob_ffin iob_p71_ffin(.pad(P71), .k(P11), .in(p71_in), .rst(P54));
 	
 	assign P72 = (!DONE) ? 1'b1 : (gh_y == 1'b0) ? gj_y : 1'bz;			//DIN
-	wire p72_in;
-	buf(p72_in, P72);
 	
 	assign P73 = (!DONE) ? 1'b1 : cf_y;											//DOUT
 	
 	assign P75 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? dh_x : 1'bz;
-	wire p75_in;
-	buf(p75_in, P75);
 	
 	assign P76 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? bj_y : 1'bz;
-	wire p76_in;
-	buf(p76_in, P76);
 	
 	assign P77 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? bh_y : 1'bz;
-	wire p77_in;
-	buf(p77_in, P77);
 	
 	assign P78 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? ci_y : 1'bz;
-	wire p78_in;
-	buf(p78_in, P78);
-	
+
 	assign P79 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? ah_y : 1'bz;
 	
 	assign P80 = (!DONE) ? 1'b1 : 1'bz;
 	wire p80_in;
-	iob_ffin iob_p80_ffin(.pad(P80), .k(p11_in), .in(p80_in), .rst(P54_in));
+	iob_ffin iob_p80_ffin(.pad(P80), .k(P11), .in(p80_in), .rst(P54));
 	
 	assign P81 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? bg_y : 1'bz;
 	
 	assign P82 = (!DONE) ? 1'b1 : 1'bz;
 	wire p82_in;
-	iob_ffin iob_p82_ffin(.pad(P82), .k(p11_in), .in(p82_in), .rst(P54_in));
+	iob_ffin iob_p82_ffin(.pad(P82), .k(P11), .in(p82_in), .rst(P54));
 	
 	assign P83 = (!DONE) ? 1'b1 : (fi_y == 1'b0) ? bf_y : 1'bz;
 	
 	assign P84 = (!DONE) ? 1'b1 : 1'bz;
 	wire p84_in;
-	iob_ffin iob_p84_ffin(.pad(P84), .k(p11_in), .in(p84_in), .rst(P54_in));
+	iob_ffin iob_p84_ffin(.pad(P84), .k(P11), .in(p84_in), .rst(P54));
 	
 	
 	/* CLB Description */
 	/*  ROW A */
 	//FF
 	wire aa_y;
-	clb_aa clb_aa(.b(p13_in), .k(cg_y), .y(aa_y), .rst(P54_in));
+	clb_aa clb_aa(.b(P13), .k(cg_y), .y(aa_y), .rst(P54));
 	
 	wire ac_x, ac_y;
-	clb_ac clb_ac(.a(P3), .b(fi_y), .c(p19_in), .d(bc_x), .x(ac_x), .y(ac_y));
+	clb_ac clb_ac(.a(P3), .b(fi_y), .c(P19), .d(bc_x), .x(ac_x), .y(ac_y));
 	
 	//FF
 	wire ae_y;
-	clb_ae clb_ae(.b(p11_in), .k(p56_in), .y(ae_y), .rst(P54_in));
+	clb_ae clb_ae(.b(P11), .k(P56), .y(ae_y), .rst(P54));
 	
 	wire af_x;
 	clb_af clb_af(.a(p80_in), .b(p84_in), .c(p5_in), .d(p82_in), .x(af_x));
@@ -390,27 +309,27 @@ module dueottosei(				//                     HANDLED
 	
 	//FF
 	wire ah_x, ah_y;
-	clb_ah clb_ah(.b(p80_in), .c(di_x), .d(p14_in), .k(hj_y), .x(ah_x), .y(ah_y), .rst(P54_in));
+	clb_ah clb_ah(.b(p80_in), .c(di_x), .d(P14), .k(hj_y), .x(ah_x), .y(ah_y), .rst(P54));
 	
 	wire aj_x;
-	clb_aj clb_aj(.a(p76_in), .b(p78_in), .c(p77_in), .d(p75_in), .x(aj_x));
+	clb_aj clb_aj(.a(P76), .b(P78), .c(P77), .d(P75), .x(aj_x));
 	
 	/* ROW B */
 	//FF
 	wire ba_y;
-	clb_ba clb_ba(.c(p14_in), .k(cg_y), .y(ba_y), .rst(P54_in));
+	clb_ba clb_ba(.c(P14), .k(cg_y), .y(ba_y), .rst(P54));
 	
 	// FF with async reset
 	wire bc_x, bc_y;
-	clb_bc clb_bc(.c(eb_y), .d(gb_x), .k(p27_in), .x(bc_x), .y(bc_y), .rst(P54_in));
+	clb_bc clb_bc(.c(eb_y), .d(gb_x), .k(P27), .x(bc_x), .y(bc_y), .rst(P54));
 	
 	//FF
 	wire bd_y;
-	clb_bd clb_bd(.a(p6_in), .c(ae_y), .y(bd_y), .rst(P54_in));
+	clb_bd clb_bd(.a(P6), .c(ae_y), .y(bd_y), .rst(P54));
 	
 	//FF
 	wire be_x;
-	clb_be clb_be(.a(fe_y), .b(p15_in), .c(p6_in), .k(p56_in), .x(be_x), .rst(P54_in));
+	clb_be clb_be(.a(fe_y), .b(P15), .c(P6), .k(P56), .x(be_x), .rst(P54));
 	
 	wire bf_y;
 	clb_bf clb_bf(.a(af_x), .b(di_x), .c(p84_in), .d(p63_in), .y(bf_y));
@@ -420,7 +339,7 @@ module dueottosei(				//                     HANDLED
 	
 	//FF
 	wire bh_x, bh_y;
-	clb_bh clb_bh(.a(ah_x), .b(di_x), .c(ci_x), .k(hj_y), .x(bh_x), .y(bh_y), .rst(P54_in));
+	clb_bh clb_bh(.a(ah_x), .b(di_x), .c(ci_x), .k(hj_y), .x(bh_x), .y(bh_y), .rst(P54));
 	
 	wire bj_y;
 	clb_bj clb_bj(.a(dh_x), .b(bh_x), .c(cj_x), .d(di_x), .y(bj_y));
@@ -428,33 +347,33 @@ module dueottosei(				//                     HANDLED
 	/* ROW C */
 	//FF
 	wire ca_y;
-	clb_ca clb_ca(.c(p16_in), .k(cg_y), .y(ca_y), .rst(P54_in));
+	clb_ca clb_ca(.c(P16), .k(cg_y), .y(ca_y), .rst(P54));
 	
 	wire cb_x, cb_y;
-	clb_cb clb_cb(.a(p63_in), .b(p35_in), .c(be_x), .d(p17_in), .x(cb_x), .y(cb_y));
+	clb_cb clb_cb(.a(p63_in), .b(P35), .c(be_x), .d(P17), .x(cb_x), .y(cb_y));
 	
 	//FF
 	wire cc_x, cc_y;
-	clb_cc clb_cc(.b(bc_x), .c(dc_x), .k(p27_in), .x(cc_x), .y(cc_y), .rst(P54_in));
+	clb_cc clb_cc(.b(bc_x), .c(dc_x), .k(P27), .x(cc_x), .y(cc_y), .rst(P54));
 	
 	//FF
 	wire cd_y;
-	clb_cd clb_cd(.c(dd_x), .k(hc_y), .y(cd_y), .rst(P54_in));
+	clb_cd clb_cd(.c(dd_x), .k(hc_y), .y(cd_y), .rst(P54));
 	
 	//FF
 	wire ce_y;
-	clb_ce clb_ce(.a(cb_y), .b(cd_y), .c(cg_x), .k(p56_in), .y(ce_y), .rst(P54_in));
+	clb_ce clb_ce(.a(cb_y), .b(cd_y), .c(cg_x), .k(P56), .y(ce_y), .rst(P54));
 	
 	//FF
 	wire cf_y;
-	clb_cf clb_cf(.a(cg_y), .c(hd_x), .k(p56_in), .y(cf_y), .rst(P54_in));
+	clb_cf clb_cf(.a(cg_y), .c(hd_x), .k(P56), .y(cf_y), .rst(P54));
 
 	wire cg_x, cg_y;
-	clb_cg clb_cg(.a(p72_in), .c(ih_y), .d(gg_y), .x(cg_x), .y(cg_y));
+	clb_cg clb_cg(.a(P72), .c(ih_y), .d(gg_y), .x(cg_x), .y(cg_y));
 	
 	//FF
 	wire ch_x;
-	clb_ch clb_ch(.b(bh_x), .k(hj_y), .x(ch_x), .rst(P54_in));
+	clb_ch clb_ch(.b(bh_x), .k(hj_y), .x(ch_x), .rst(P54));
 	
 	wire ci_x, ci_y;
 	clb_ci clb_ci(.a(p71_in), .b(dh_y), .c(di_x), .d(p69_in), .x(ci_x), .y(ci_y));
@@ -465,91 +384,91 @@ module dueottosei(				//                     HANDLED
 	/* ROW D */
 	//FF
 	wire da_y;
-	clb_da clb_da(.b(dd_y), .c(hj_y), .y(da_y), .rst(P54_in));
+	clb_da clb_da(.b(dd_y), .c(hj_y), .y(da_y), .rst(P54));
 	
 	//FF latch
 	wire dc_x, dc_y;
-	clb_dc clb_dc(.a(p18_in), .b(fi_y), .c(p10_in), .k(p11_in), .x(dc_x), .y(dc_y), .rst(P54_in));
+	clb_dc clb_dc(.a(P18), .b(fi_y), .c(P10), .k(P11), .x(dc_x), .y(dc_y), .rst(P54));
 	
 	//FF
 	wire dd_x, dd_y;
-	clb_dd clb_dd(.a(ce_y), .d(fi_y), .k(hc_y), .x(dd_x), .y(dd_y), .rst(P54_in));
+	clb_dd clb_dd(.a(ce_y), .d(fi_y), .k(hc_y), .x(dd_x), .y(dd_y), .rst(P54));
 	
 	//FF
 	wire de_x;
-	clb_de clb_de(.d(gf_y), .k(p56_in), .x(de_x), .rst(P54_in));
+	clb_de clb_de(.d(gf_y), .k(P56), .x(de_x), .rst(P54));
 	
 	//FF
 	wire df_x;
-	clb_df clb_df(.a(ac_x), .b(ee_y), .c(ff_x), .k(p56_in), .x(df_x), .rst(P54_in));
+	clb_df clb_df(.a(ac_x), .b(ee_y), .c(ff_x), .k(P56), .x(df_x), .rst(P54));
 	
 	//FF
 	wire dh_x, dh_y;
-	clb_dh clb_dh(.a(ch_x), .d(di_x), .k(hj_y), .x(dh_x), .y(dh_y), .rst(P54_in));
+	clb_dh clb_dh(.a(ch_x), .d(di_x), .k(hj_y), .x(dh_x), .y(dh_y), .rst(P54));
 	
 	//FF
 	wire di_x, di_y;
-	clb_di clb_di(.a(p63_in), .b(p68_in), .c(p67_in), .k(ih_y), .x(di_x), .y(di_y), .rst(P54_in));
+	clb_di clb_di(.a(p63_in), .b(P68), .c(P67), .k(ih_y), .x(di_x), .y(di_y), .rst(P54));
 	
 	//FF
 	wire dj_x;
-	clb_dj clb_dj(.b(ih_y), .c(ei_y), .k(p56_in), .x(dj_x), .rst(P54_in));
+	clb_dj clb_dj(.b(ih_y), .c(ei_y), .k(P56), .x(dj_x), .rst(P54));
 	
 	/* ROW E */
 	//FF
 	wire ea_y;
-	clb_ea clb_ea(.c(p20_in), .k(cg_y), .y(ea_y), .rst(P54_in));
+	clb_ea clb_ea(.c(P20), .k(cg_y), .y(ea_y), .rst(P54));
 	
 	wire eb_y;
-	clb_eb clb_eb(.a(cb_x), .b(p11_in), .c(fb_x), .d(p24_in), .y(eb_y));
+	clb_eb clb_eb(.a(cb_x), .b(P11), .c(fb_x), .d(p24_in), .y(eb_y));
 	
 	//FF
 	wire ec_y;
-	clb_ec clb_ec(.a(bc_y), .c(p37_in), .d(cc_y), .k(p27_in), .y(ec_y), .rst(P54_in));
+	clb_ec clb_ec(.a(bc_y), .c(P37), .d(cc_y), .k(P27), .y(ec_y), .rst(P54));
 	
 	wire ed_y;
 	clb_ed clb_ed(.a(gf_y), .b(ec_y), .c(cb_x), .d(fb_x), .y(ed_y));
 
 	//FF
 	wire ee_y;
-	clb_ee clb_ee(.a(de_x), .c(fg_y), .k(p56_in), .y(ee_y), .rst(P54_in));
+	clb_ee clb_ee(.a(de_x), .c(fg_y), .k(P56), .y(ee_y), .rst(P54));
 	
 	//FF
 	wire ef_x;
-	clb_ef clb_ef(.a(dc_y), .b(ee_y), .c(ff_x), .k(p56_in), .x(ef_x), .rst(P54_in));
+	clb_ef clb_ef(.a(dc_y), .b(ee_y), .c(ff_x), .k(P56), .x(ef_x), .rst(P54));
 	
 	wire ei_y;
-	clb_ei clb_ei(.a(p67_in), .b(bd_y), .c(ag_y), .y(ei_y));
+	clb_ei clb_ei(.a(P67), .b(bd_y), .c(ag_y), .y(ei_y));
 	
 	/* ROW F */
 	//FF
 	wire fa_y;
-	clb_fa clb_fa(.b(p23_in), .k(cg_y), .y(fa_y), .rst(P54_in));
+	clb_fa clb_fa(.b(P23), .k(cg_y), .y(fa_y), .rst(P54));
 	
 	//FF
 	wire fb_x, fb_y;
-	clb_fb clb_fb(.a(fe_y), .b(p11_in), .c(p24_in), .k(p56_in), .x(fb_x), .y(fb_y), .rst(P54_in));
+	clb_fb clb_fb(.a(fe_y), .b(P11), .c(p24_in), .k(P56), .x(fb_x), .y(fb_y), .rst(P54));
 	
 	wire fc_x, fc_y;
 	clb_fc clb_fc(.a(fb_x), .b(p5_in), .c(p41_in), .d(p63_in), .x(fc_x), .y(fc_y));
 	
 	//FF async reset
 	wire fd_x;
-	clb_fd clb_fd(.a(fb_x), .c(p61_in), .d(he_y), .k(hc_y), .x(fd_x), .rst(P54_in));
+	clb_fd clb_fd(.a(fb_x), .c(P61), .d(he_y), .k(hc_y), .x(fd_x), .rst(P54));
 	
 	//FF
 	wire fe_y;
-	clb_fe clb_fe(.a(fb_x), .b(ed_y), .c(ge_x), .k(p56_in), .y(fe_y), .rst(P54_in));
+	clb_fe clb_fe(.a(fb_x), .b(ed_y), .c(ge_x), .k(P56), .y(fe_y), .rst(P54));
 	
 	//FF
 	wire ff_x, ff_y;
-	clb_ff clb_ff(.a(aj_x), .b(fe_y), .c(fi_y), .d(p61_in), .k(p56_in), .x(ff_x), .y(ff_y), .rst(P54_in));
+	clb_ff clb_ff(.a(aj_x), .b(fe_y), .c(fi_y), .d(P61), .k(P56), .x(ff_x), .y(ff_y), .rst(P54));
 	
 	wire fg_y;
 	clb_fg clb_fg(.a(fb_y), .b(ff_y), .c(gf_y), .d(he_y), .y(fg_y));
 	
 	wire fi_x, fi_y;
-	clb_fi clb_fi(.b(ig_y), .c(p59_in), .d(hj_x), .x(fi_x), .y(fi_y));
+	clb_fi clb_fi(.b(ig_y), .c(P59), .d(hj_x), .x(fi_x), .y(fi_y));
 	
 	wire fj_x;
 	clb_fj clb_fj(.b(p41_in), .d(p63_in), .x(fj_x));
@@ -557,32 +476,32 @@ module dueottosei(				//                     HANDLED
 	/* ROW G */
 	//FF
 	wire ga_y;
-	clb_ga clb_ga(.b(p25_in), .k(cg_y), .y(ga_y), .rst(P54_in));
+	clb_ga clb_ga(.b(P25), .k(cg_y), .y(ga_y), .rst(P54));
 	
 	//FF
 	wire gb_x, gb_y;
-	clb_gb clb_gb(.a(fe_y), .k(p56_in), .x(gb_x), .y(gb_y), .rst(P54_in));
+	clb_gb clb_gb(.a(fe_y), .k(P56), .x(gb_x), .y(gb_y), .rst(P54));
 	
 	wire gc_x, gc_y;
 	clb_gc clb_gc(.a(p63_in), .c(bc_y), .d(p41_in), .x(gc_x), .y(gc_y));
 	
 	//FF async reset not clk
 	wire gd_y;
-	clb_gd clb_gd(.c(gc_y), .d(ih_y), .y(gd_y), .rst(P54_in));
+	clb_gd clb_gd(.c(gc_y), .d(ih_y), .y(gd_y), .rst(P54));
 	
 	//FF
 	wire ge_x;
-	clb_ge clb_ge(.b(p11_in), .k(p56_in), .x(ge_x), .rst(P54_in));
+	clb_ge clb_ge(.b(P11), .k(P56), .x(ge_x), .rst(P54));
 	
 	//FF
 	wire gf_x, gf_y;
-	clb_gf clb_gf(.b(ff_x), .c(ee_y), .k(p56_in), .x(gf_x), .y(gf_y), .rst(P54_in));
+	clb_gf clb_gf(.b(ff_x), .c(ee_y), .k(P56), .x(gf_x), .y(gf_y), .rst(P54));
 	
 	wire gg_x, gg_y;
-	clb_gg clb_gg(.a(p47_in), .b(p50_in), .c(ff_y), .d(p49_in), .x(gg_x), .y(gg_y));
+	clb_gg clb_gg(.a(P47), .b(P50), .c(ff_y), .d(P49), .x(gg_x), .y(gg_y));
 	
 	wire gh_y;
-	clb_gh clb_gh(.c(p50_in), .d(p49_in), .y(gh_y));
+	clb_gh clb_gh(.c(P50), .d(P49), .y(gh_y));
 	
 	wire gi_y;
 	clb_gi clb_gi(.a(hj_x), .b(cf_y), .c(cg_x), .d(hf_y), .y(gi_y));
@@ -593,103 +512,103 @@ module dueottosei(				//                     HANDLED
 	/* ROW H */
 	//FF
 	wire ha_y;
-	clb_ha clb_ha(.c(p26_in), .k(cg_y), .y(ha_y), .rst(P54_in));
+	clb_ha clb_ha(.c(P26), .k(cg_y), .y(ha_y), .rst(P54));
 	
 	//FF
 	wire hb_y;
-	clb_hb clb_hb(.c(ib_x), .y(hb_y), .rst(P54_in));
+	clb_hb clb_hb(.c(ib_x), .y(hb_y), .rst(P54));
 	
 	//FF
 	wire hc_y;
-	clb_hc clb_hc(.c(hb_y), .y(hc_y), .rst(P54_in));
+	clb_hc clb_hc(.c(hb_y), .y(hc_y), .rst(P54));
 	
 	wire hd_x, hd_y;
 	clb_hd clb_hd(.b(gc_x), .c(bc_y), .d(fi_y), .x(hd_x), .y(hd_y));
 	
 	//FF
 	wire he_y;
-	clb_he clb_he(.a(jf_x), .b(fd_x), .c(ie_x), .k(p56_in), .y(he_y), .rst(P54_in));
+	clb_he clb_he(.a(jf_x), .b(fd_x), .c(ie_x), .k(P56), .y(he_y), .rst(P54));
 	
 	//FF
 	wire hf_y;
-	clb_hf clb_hf(.a(gd_y), .c(ih_y), .k(p56_in), .y(hf_y), .rst(P54_in));
+	clb_hf clb_hf(.a(gd_y), .c(ih_y), .k(P56), .y(hf_y), .rst(P54));
 	
 	//FF
 	wire hg_y;
-	clb_hg clb_hg(.a(bd_y), .b(ih_y), .c(gd_y), .k(p56_in), .y(hg_y), .rst(P54_in));
+	clb_hg clb_hg(.a(bd_y), .b(ih_y), .c(gd_y), .k(P56), .y(hg_y), .rst(P54));
 	
 	wire hh_y;
-	clb_hh clb_hh(.a(p49_in), .b(bd_y), .c(gg_x), .d(fi_y), .y(hh_y));
+	clb_hh clb_hh(.a(P49), .b(bd_y), .c(gg_x), .d(fi_y), .y(hh_y));
 	
 	//FF
 	wire hi_y;
-	clb_hi clb_hi(.a(p62_in), .k(ih_y), .y(hi_y), .rst(P54_in));
+	clb_hi clb_hi(.a(P62), .k(ih_y), .y(hi_y), .rst(P54));
 	
 	//FF
 	wire hj_x, hj_y;
-	clb_hj clb_hj(.a(gg_y), .b(hi_y), .c(p53_in), .k(p56_in), .x(hj_x), .y(hj_y), .rst(P54_in));
+	clb_hj clb_hj(.a(gg_y), .b(hi_y), .c(P53), .k(P56), .x(hj_x), .y(hj_y), .rst(P54));
 	
 	/* ROW I */
 	//FF
 	wire ia_y;
-	clb_ia clb_ia(.c(p28_in), .k(cg_y), .y(ia_y), .rst(P54_in));
+	clb_ia clb_ia(.c(P28), .k(cg_y), .y(ia_y), .rst(P54));
 	
 	//FF
 	wire ib_x;
-	clb_ib clb_ib(.c(jb_x), .x(ib_x), .rst(P54_in));
+	clb_ib clb_ib(.c(jb_x), .x(ib_x), .rst(P54));
 	
 	wire ic_y;
 	clb_ic clb_ic(.a(if_y), .y(ic_y));
 	
 	//FF
 	wire ie_x;
-	clb_ie clb_ie(.d(jf_x), .k(p56_in), .x(ie_x), .rst(P54_in));
+	clb_ie clb_ie(.d(jf_x), .k(P56), .x(ie_x), .rst(P54));
 	
 	//FF async reset
 	wire if_y;
-	clb_if clb_if(.a(fi_y), .b(ig_y), .c(jg_y), .k(p56_in), .y(if_y), .rst(P54_in));
+	clb_if clb_if(.a(fi_y), .b(ig_y), .c(jg_y), .k(P56), .y(if_y), .rst(P54));
 	
 	wire ig_x, ig_y;
-	clb_ig clb_ig(.a(ij_y), .c(p8_in), .x(ig_x), .y(ig_y));
+	clb_ig clb_ig(.a(ij_y), .c(P8), .x(ig_x), .y(ig_y));
 	
 	//FF async reset
 	wire ih_x, ih_y;
-	clb_ih clb_ih(.a(p50_in), .c(ii_y), .d(p49_in), .x(ih_x), .y(ih_y), .rst(P54_in));
+	clb_ih clb_ih(.a(P50), .c(ii_y), .d(P49), .x(ih_x), .y(ih_y), .rst(P54));
 	
 	//FF sync reset
 	wire ii_y;
-	clb_ii clb_ii(.a(p58_in), .b(ih_y), .c(p52_in), .d(p57_in), .y(ii_y), .rst(P54_in));
+	clb_ii clb_ii(.a(P58), .b(ih_y), .c(P52), .d(P57), .y(ii_y), .rst(P54));
 	
 	//FF
 	wire ij_y;
-	clb_ij clb_ij(.a(fi_y), .b(ih_y), .c(hi_y), .k(p56_in), .y(ij_y), .rst(P54_in));
+	clb_ij clb_ij(.a(fi_y), .b(ih_y), .c(hi_y), .k(P56), .y(ij_y), .rst(P54));
 	
 	/* ROW J */
 	//FF
 	wire ja_y;
-	clb_ja clb_ja(.c(jc_y), .y(ja_y), .rst(P54_in));
+	clb_ja clb_ja(.c(jc_y), .y(ja_y), .rst(P54));
 	
 	//FF
 	wire jb_x;
-	clb_jb clb_jb(.c(ja_y), .x(jb_x), .rst(P54_in));
+	clb_jb clb_jb(.c(ja_y), .x(jb_x), .rst(P54));
 	
 	//FF
 	wire jc_y;
-	clb_jc clb_jc(.k(p27_in), .y(jc_y), .rst(P54_in));
+	clb_jc clb_jc(.k(P27), .y(jc_y), .rst(P54));
 	
 	wire jd_y;
 	clb_jd clb_jd(.c(df_x), .d(je_y), .y(jd_y));
 	
 	//FF
 	wire je_x, je_y;
-	clb_je clb_je(.a(ef_x), .b(ie_x), .c(he_y), .k(p56_in), .x(je_x), .y(je_y), .rst(P54_in));
+	clb_je clb_je(.a(ef_x), .b(ie_x), .c(he_y), .k(P56), .x(je_x), .y(je_y), .rst(P54));
 	
 	//FF
 	wire jf_x, jf_y;
-	clb_jf clb_jf(.b(hi_y), .c(ee_y), .k(p56_in), .x(jf_x), .y(jf_y), .rst(P54_in));
+	clb_jf clb_jf(.b(hi_y), .c(ee_y), .k(P56), .x(jf_x), .y(jf_y), .rst(P54));
 	
 	wire jg_y;
-	clb_jg clb_jg(.a(ih_x), .b(p44_in), .c(fj_x), .d(p42_in), .y(jg_y));
+	clb_jg clb_jg(.a(ih_x), .b(P44), .c(fj_x), .d(P42), .y(jg_y));
 	
 	
 	
